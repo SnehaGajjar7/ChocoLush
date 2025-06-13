@@ -23,12 +23,11 @@ const Navbar = ({ setShowLogin }) => {
     setToken("");
     navigate("/");
   };
- 
 
   return (
     <>
       <div className="navbar">
-        <Link to='/' className="navbar-logo">
+        <Link to="/" className="navbar-logo">
           <img src={assets.logo} alt="logo" className="logo" />
         </Link>
         <ul className={`navbar-menu ${menuOpen ? "open" : ""}`}>
@@ -49,80 +48,69 @@ const Navbar = ({ setShowLogin }) => {
             </span>
             <div className="mega-menu">
               <div className="mega-menu-column">
-                <h4>Shop by Category</h4>
-                <Link to="/collection/category/vase">Flower in Vase</Link>
-                <Link to="/collection/category/box">Flower in Box</Link>
-                <Link to="/collection/category/bouquet">Flowers Bouquet</Link>
-                <Link to="/collection/category/plant">Plants</Link>
-                <Link to="/collection/category/other">Other</Link>
+                <h4>Cakes</h4>
+                <Link to="/collection/category/birthday-cakes">
+                  Birthday Cakes
+                </Link>
+                <Link to="/collection/category/wedding-cakes">
+                  Wedding Cakes
+                </Link>
+                <Link to="/collection/category/photo-cakes">Photo Cakes</Link>
+                <Link to="/collection/category/theme-cakes">Theme Cakes</Link>
+                <Link to="/collection/category/mini-cakes">Mini Cakes</Link>
+                <Link to="/collection/category/jar-cakes">Jar Cakes</Link>
               </div>
               <div className="mega-menu-column">
-                <h4>By Occassion</h4>
-                <Link to="/collection/occassion/anniversary">Anniversary</Link>
-                <Link to="/collection/occassion/babyshower">Baby Shower</Link>
-                <Link to="/collection/occassion/birthday">Birthday</Link>
-                <Link to="/collection/occassion/friendship">
-                  Friendship Day
-                </Link>
-                <Link to="/collection/occassion/mother">Mother's Day</Link>
-                <Link to="/collection/occassion/father">Father's Day</Link>
-                <Link to="/collection/occassion/valentine">Valentines Day</Link>
-                <Link to="/collection/occassion/diwali">Diwali Special</Link>
-                <Link to="/collection/occassion/rakshabandhan">
-                  Raksha Bandhan
-                </Link>
-                <Link to="/collection/occassion/wedding">Wedding</Link>
+                <h4>Pastries</h4>
+                <Link to="/collection/category/pastries">Pastries</Link>
+                <Link to="/collection/category/muffins">Muffins</Link>
+                <Link to="/collection/category/cupcakes">Cupcakes</Link>
+                <Link to="/collection/category/brownies">Brownies</Link>
+                <Link to="/collection/category/cheesecakes">Cheesecakes</Link>
+                <Link to="/collection/category/tarts">Tarts</Link>
               </div>
-            </div>
-          </li>
-          <li className="dropdown">
-            <span
-              onClick={() => setFlower("decoration")}
-              className={flower === "decoration" ? "active" : ""}
-            >
-              Decoration
-            </span>
-            <div className="mega-menu">
               <div className="mega-menu-column">
-                <h4>Decoration</h4>
-                <Link to="/collection/decoration/home">Home</Link>
-                <Link to="/collection/decoration/office">Office</Link>
-                <Link to="/collection/decoration/garden">Garden</Link>
-                <Link to="/collection/decoration/party">Party</Link>
-                <Link to="/collection/decoration/other">Other</Link>
+                <h4>Cookies & Biscuits</h4>
+                <Link to="/collection/category/cookies">Cookies</Link>
+                <Link to="/collection/category/macarons">Macarons</Link>
+                <Link to="/collection/category/biscotti">Biscotti</Link>
+              </div>
+              <div className="mega-menu-column">
+                <h4>Special Treats</h4>
+                <Link to="/collection/category/doughnuts">Doughnuts</Link>
+                <Link to="/collection/category/churros">Churros</Link>
+                <Link to="/collection/category/eclairs">Éclairs</Link>
+                <Link to="/collection/category/puffs">Puffs</Link>
+              </div>
+              <div className="mega-menu-column">
+                <h4>Breads & Savory</h4>
+                <Link to="/collection/category/croissants">Croissants</Link>
+                <Link to="/collection/category/garlic-breads">
+                  Garlic Breads
+                </Link>
+                <Link to="/collection/category/stuffed-buns">Stuffed Buns</Link>
+                <Link to="/collection/category/rolls-loaves">
+                  Rolls & Loaves
+                </Link>
+              </div>
+              <div className="mega-menu-column">
+                <h4>Gifting & Specials</h4>
+                <Link to="/collection/category/dessert-boxes">
+                  Dessert Boxes
+                </Link>
+                <Link to="/collection/category/custom-hampers">
+                  Custom Hampers
+                </Link>
+                <Link to="/collection/category/festive-specials">
+                  Festive Specials
+                </Link>
+                <Link to="/collection/category/vegan-glutenfree">
+                  Vegan & Gluten-Free
+                </Link>
               </div>
             </div>
           </li>
 
-          <li className="dropdown">
-            <span
-              onClick={() => setFlower("flowers")}
-              className={flower === "flowers" ? "active" : ""}
-            >
-              Flowers
-            </span>
-            <div className="mega-menu">
-              <div className="mega-menu-column">
-                <h4>Flower Types</h4>
-                <Link to="/collection/type/rose">Roses</Link>
-                <Link to="/collection/type/lily">Lilis</Link>
-                <Link to="/collection/type/sunflower">Sunflowers</Link>
-                <Link to="/collection/type/tulip">Tulip</Link>
-                <Link to="/collection/type/jasmine">Jasmine</Link>
-                <Link to="/collection/type/daisy">Daisy</Link>
-                <Link to="/collection/type/lavender">Lavender</Link>
-                <Link to="/collection/type/marigold">Marigold</Link>
-                <Link to="/collection/type/orchid">Orchide</Link>
-                <Link to="/collection/type/peony">Peony</Link>
-                <Link to="/collection/type/carnation">Carnation</Link>
-                <Link to="/collection/type/cherry">Cherry</Link>
-                <Link to="/collection/type/dry">Dry</Link>
-                <Link to="/collection/type/gladiolus">Gladiolus</Link>
-                <Link to="/collection/type/mixed">Mixed</Link>
-                <Link to="/collection/type/other">Other</Link>
-              </div>
-            </div>
-          </li>
           <Link to={"/blogs"}>
             <li
               onClick={() => setFlower("blog")}
@@ -156,7 +144,7 @@ const Navbar = ({ setShowLogin }) => {
             <Link to={"/cart"}>
               <IoIosBasket color="rgb(117, 131, 99)" fontSize="30px" />
             </Link>
-            <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
+            {/* <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div> */}
           </div>
           {!token ? (
             <button onClick={() => setShowLogin(true)}>Sign In</button>
@@ -201,8 +189,7 @@ const Navbar = ({ setShowLogin }) => {
           </div>
         </div>
       </div>
-    
-     
+
       {showLogoutModal && (
         <LogoutModal
           onConfirm={logout}
