@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  /* --main: #fa7290; */
+  --main: #c27979;
+  --dark: #e2aaaa;
+  --green: rgb(117, 131, 99);
+  --light: #f1bfbf;
+  --yellow: rgb(231, 189, 111);
+  --black: #4a4a4a;
+  --gray: #999;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Tinos", serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+p {
+  font-size: 18px;
+  color: var(--black);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  width: 100%;
+  margin: auto;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

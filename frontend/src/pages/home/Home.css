@@ -1,0 +1,56 @@
+.seasonal-banner {
+  background-image: url("https://png.pngtree.com/background/20250212/original/pngtree-sunflowers-field-summer-landscape-picture-image_16233777.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  width: 90%;
+  justify-self: center;
+}
+.seasonal-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.158); 
+  z-index: 0;
+}
+
+.seasonal-banner > * {
+  position: relative;
+  z-index: 1;
+}
+.season-text {
+  left: 20%;
+  text-align: center;
+}
+.season-title {
+  font-size: 49px;
+  color: var(--yellow);
+  margin-top: 50px;
+ 
+}
+.season-subtext {
+  font-size: 28px;
+  color: var(--black);
+  margin-bottom: 20px;
+ 
+}
+.seasonal-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 10px auto;
+  max-width: 600px;
+}
+
+.seasonal-highlights li {
+  font-size: 20px;
+  padding: 8px 0;
+  color: rgb(228, 221, 221);
+}

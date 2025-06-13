@@ -1,0 +1,76 @@
+.glimpse-strip-section {
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 95%;
+}
+
+.glimpse-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--main);
+}
+.glimpse-item {
+  position: relative;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(240, 169, 240, 0.199);
+  transition: transform 0.3s ease;
+  width: 350px;
+  height: 450px;
+}
+.glimpse-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.95);
+  transition: transform 0.4s ease;
+}
+
+.glimpse-item:hover img {
+  transform: scale(1.05);
+}
+
+
+.floating-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 240, 245, 0.85);
+  color: #a14480;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(255, 182, 193, 0.4);
+}
+.glimpse-strip-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.glimpse-strip-scroll {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.auto-scroll {
+  animation: scroll-left 70s linear infinite;
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}

@@ -1,0 +1,100 @@
+.collection-card {
+  background: #fff;
+  overflow: hidden;
+  width: 450px;
+  position: relative;
+}
+.collection-image {
+  width: 450px;
+  height: 380px;
+  object-fit: cover;
+}
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 12px 20px;
+  border-radius: 0px 20px 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  
+}
+.badge.new {
+  background: linear-gradient(135deg, var(--light),var(--main)); 
+  color: #fff;
+ 
+}
+.badge.trending {
+  background: linear-gradient(135deg, var(--dark),var(--main)); 
+  color: #f0f0f0;
+}
+
+.collection-info {
+  padding: 5px;
+  border: 2px solid var(--dark);
+}
+.collection-name {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 0 0 -20px;
+  color: var(--main);
+}
+.collection-des {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.collection-price {
+  color: var(--green);
+  margin: 20px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.price-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.avg-rating {
+  display: grid;
+  color: white;
+  background-color: var(--green);
+  padding: 5px;
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.delivery {
+  font-size: 18px;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 7px;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background: white;
+  padding: 6px;
+  border: 1px solid var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.heart {
+  font-size: 18px;
+}
