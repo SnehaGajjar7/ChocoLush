@@ -86,7 +86,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   z-index: 1000;
-  flex-wrap: wrap;
+  
+  flex-wrap: nowrap; 
+  white-space: nowrap; 
 }
 
 .dropdown:hover .mega-menu {
@@ -94,16 +96,17 @@
 }
 
 .mega-menu-column {
-  flex: 1;
+  flex: 0 0 auto;
+  width: 200px;   
   padding: 0 20px;
-  width: 200px;
+  box-sizing: border-box;
 }
 
 .mega-menu-column h4 {
   font-size: 20px;
   color: var(--main);
   margin-bottom: 10px;
-  font-weight: 600;
+  font-family: 'Pacifico', cursive;
 }
 
 .mega-menu-column a {
@@ -113,12 +116,13 @@
   text-decoration: none;
   margin-bottom: 6px;
   transition: color 0.3s;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .mega-menu-column a:hover {
   color: var(--main);
 }
+
 
 /* --- Hamburger --- */
 .hamburger {
