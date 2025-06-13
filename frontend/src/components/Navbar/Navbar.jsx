@@ -12,7 +12,7 @@ import LogoutModal from "../logout/Logout";
 import { FaHouseChimneyUser } from "react-icons/fa6";
 
 const Navbar = ({ setShowLogin }) => {
-  const [flower, setFlower] = useState("All");
+  const [cake, setCake] = useState("All");
   const [menuOpen, setMenuOpen] = useState(false);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const { getTotalCartAmount, token, setToken } = useContext(CartContext);
@@ -33,16 +33,16 @@ const Navbar = ({ setShowLogin }) => {
         <ul className={`navbar-menu ${menuOpen ? "open" : ""}`}>
           <Link to={"/"}>
             <li
-              onClick={() => setFlower("home")}
-              className={flower === "home" ? "active" : ""}
+              onClick={() => setCake("home")}
+              className={cake === "home" ? "active" : ""}
             >
               Home
             </li>
           </Link>
           <li className="dropdown">
             <span
-              onClick={() => setFlower("collection")}
-              className={flower === "collection" ? "active" : ""}
+              onClick={() =>setCake("collection")}
+              className={cake === "collection" ? "active" : ""}
             >
               Collection
             </span>
@@ -110,27 +110,69 @@ const Navbar = ({ setShowLogin }) => {
               </div>
             </div>
           </li>
+          <li className="dropdown">
+  <span
+    onClick={() => setCake("drinks")}
+    className={cake === "drinks" ? "active" : ""}
+  >
+    Cafe Sips
+  </span>
+  <div className="mega-menu">
+    <div className="mega-menu-column">
+      <h4>Hot Beverages</h4>
+      <Link to="/collection/category/coffee">Coffee</Link>
+      <Link to="/collection/category/latte">Latte</Link>
+      <Link to="/collection/category/cappuccino">Cappuccino</Link>
+      <Link to="/collection/category/espresso">Espresso</Link>
+      <Link to="/collection/category/hot-chocolate">Hot Chocolate</Link>
+      <Link to="/collection/category/tea">Assorted Teas</Link>
+    </div>
+    <div className="mega-menu-column">
+      <h4>Cold Beverages</h4>
+      <Link to="/collection/category/iced-coffee">Iced Coffee</Link>
+      <Link to="/collection/category/iced-latte">Iced Latte</Link>
+      <Link to="/collection/category/frappes">Frappes</Link>
+      <Link to="/collection/category/cold-brew">Cold Brew</Link>
+      <Link to="/collection/category/iced-tea">Iced Tea</Link>
+    </div>
+
+    <div className="mega-menu-column">
+      <h4>Seasonal Specials</h4>
+      <Link to="/collection/category/winter-specials">Winter Warmers</Link>
+      <Link to="/collection/category/summer-drinks">Summer Coolers</Link>
+      <Link to="/collection/category/festive-drinks">Festive Drinks</Link>
+      <Link to="/collection/category/limited-edition">Limited Editions</Link>
+    </div>
+    <div className="mega-menu-column">
+      <h4>Health & Detox</h4>
+      <Link to="/collection/category/herbal-tea">Herbal Tea</Link>
+      <Link to="/collection/category/kombucha">Kombucha</Link>
+      <Link to="/collection/category/detox-water">Detox Water</Link>
+      <Link to="/collection/category/green-smoothies">Green Smoothies</Link>
+    </div>
+  </div>
+</li>
 
           <Link to={"/blogs"}>
             <li
-              onClick={() => setFlower("blog")}
-              className={flower === "blog" ? "active" : ""}
+              onClick={() => setCake("blog")}
+              className={cake === "blog" ? "active" : ""}
             >
               Blogs
             </li>
           </Link>
           <Link to={"/contact"}>
             <li
-              onClick={() => setFlower("contact")}
-              className={flower === "contact" ? "active" : ""}
+              onClick={() => setCake("contact")}
+              className={cake === "contact" ? "active" : ""}
             >
               Feedback
             </li>
           </Link>
           <Link to={"/about"}>
             <li
-              onClick={() => setFlower("about")}
-              className={flower === "about" ? "active" : ""}
+              onClick={() => setCake("about")}
+              className={cake=== "about" ? "active" : ""}
             >
               About
             </li>
@@ -138,11 +180,11 @@ const Navbar = ({ setShowLogin }) => {
         </ul>
         <div className="navbar-right">
           <Link to={"/wishlist"}>
-            <FaHeart color="#8a5ca6" fontSize="25px" />
+            <FaHeart color="#c27979" fontSize="25px" />
           </Link>
           <div className="navbar-search-icon">
             <Link to={"/cart"}>
-              <IoIosBasket color="rgb(117, 131, 99)" fontSize="30px" />
+              <IoIosBasket color="gray" fontSize="30px" />
             </Link>
             {/* <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div> */}
           </div>
