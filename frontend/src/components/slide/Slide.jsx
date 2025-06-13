@@ -31,17 +31,21 @@ const Slide = () => {
         backgroundImage: `url(${images[currentIndex]})`,
       }}
     >
-      <div className="header-contents">
-        <h2>Bloom Where You're Planted</h2>
-        <p>
-          From delicate bouquets to bold floral arrangements, we bring
-          nature's beauty right to your door. Celebrate love, life, and every
-          little moment with flowers that speak from the heart.
-        </p>
-        <button>
-          <a href="#arrivals">shop Collection</a>
-        </button>
-      </div>
+ <div className="header-contents">
+  <h2>Sweet Moments Start Here</h2>
+  <p>
+  Warm your heart with fresh-from-the-oven bakes crafted with love and the finest ingredients. 
+  Whether you're craving the comforting taste of a classic chocolate brownie or the elegance of a layered mousse cake, 
+  our bakery has something to make every moment a little sweeter. From timeless favorites to modern masterpieces, 
+  we bring joy to every bite — because life is better with dessert.
+</p>
+
+  <button>
+    <a href="#arrivals">Browse Goodies</a>
+  </button>
+</div>
+
+
     </div>
   );
 };
