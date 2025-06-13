@@ -3,11 +3,11 @@ import "./Slide.css";
 
 const images = [
   
-  "https://jooinn.com/images/purple-flower-lot.jpg",
-  "https://cdn.pixabay.com/photo/2024/10/12/17/15/flowers-9115519_1280.jpg",
-  "https://www.furman.edu/news/wp-content/uploads/sites/218/2025/05/irises-and-students-walking.jpg",
-  "https://www.themaevastore.com/cdn/shop/files/278143561_1014199909226726_2864653040319058353_n_1014199912560059.jpg?v=1737020893",
-  "https://assets.cntraveller.in/photos/6826b4f64010aa204e60eeb7/16:9/w_2992,h_1683,c_limit/the-hop-shop-at-castle-farm-kent-gettyimages-1149538741.jpg"
+  "https://images7.alphacoders.com/111/1114133.jpg",
+  "https://wallpapercat.com/w/full/2/f/d/589660-3840x2160-desktop-4k-cupcake-wallpaper.jpg",
+  "https://images7.alphacoders.com/129/1295118.jpg",
+  "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGJha2VyeXxlbnwwfHwwfHx8MA%3D%3D",
+  "https://images4.alphacoders.com/126/1260487.jpg"
 ];
 
 const Slide = () => {
