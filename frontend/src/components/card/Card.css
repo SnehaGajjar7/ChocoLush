@@ -1,20 +1,20 @@
 .collection-card {
   background: #fff;
   overflow: hidden;
-  width: 450px;
+  width: 350px;
   position: relative;
 }
 .collection-image {
-  width: 450px;
-  height: 380px;
+  width: 350px;
+  height: 300px;
   object-fit: cover;
 }
 .badge {
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 12px 20px;
-  border-radius: 0px 20px 10px 20px;
+  top: 1%;
+  left: 1%;
+  padding: 10px 20px;
+  border-radius: 20px;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -24,24 +24,24 @@
   
 }
 .badge.new {
-  background: linear-gradient(135deg, var(--light),var(--main)); 
-  color: #fff;
+ background-color: var(--main); 
+  color: var(--black);
  
 }
 .badge.trending {
-  background: linear-gradient(135deg, var(--dark),var(--main)); 
-  color: #f0f0f0;
+  background-color: var(--dark); 
+  color: var(--black);
 }
 
 .collection-info {
   padding: 5px;
-  border: 2px solid var(--dark);
+
 }
 .collection-name {
   display: grid;
   justify-content: center;
   align-items: center;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
   margin: 0 0 -20px;
   color: var(--main);
@@ -54,31 +54,13 @@
 .collection-price {
   color: var(--green);
   margin: 20px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 .price-rating {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-.avg-rating {
-  display: grid;
-  color: white;
-  background-color: var(--green);
-  padding: 5px;
-  margin: 8px;
   justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-}
-.delivery {
-  font-size: 18px;
-  color: var(--gray);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 7px;
 }
 
 .wishlist-btn {
