@@ -28,6 +28,7 @@ const Collection = () => {
       <div className="collection-grid">
         {filtered.length > 0 ? (
            filtered.map((product) => <Card key={product._id} product={product} />)
+
         ) : (
           <RealisticFlowerLoader/>
         )}
