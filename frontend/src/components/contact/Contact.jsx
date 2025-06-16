@@ -1,175 +1,45 @@
-import React, { useContext, useState } from "react";
-import "./Contact.css";
-import axios from "axios";
-import NotificationBubble from "../notification/Notification";
-import { CartContext } from "../../context/CartContext";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import './Feedback.css'; // CSS file (next step)
 
-const Contact = () => {
-  const { url } = useContext(CartContext);
+const FeedbackForm = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    image: null,
-    rating: 0,
+    name: '',
+    email: '',
+    satisfaction: '',
+    like: '',
+    improve: '',
+    recommend: '',
+    comments: '',
+    contactPermission: '',
   });
 
-  const [success, setSuccess] = useState(false);
-  const [alert, setAlert] = useState(null);
-
   const handleChange = (e) => {
-    setFormData((prev) => ({
+    const { name, value } = e.target;
+    setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value
     }));
   };
-  const handleSubmit = async (e) => {
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const data = new FormData();
-      data.append("name", formData.name);
-      data.append("email", formData.email);
-      data.append("message", formData.message);
-      if (formData.image) {
-        data.append("image", formData.image);
-      }
-      data.append("rating", formData.rating);
-
-      await axios.post(`${url}/api/contact`, data, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-
-      setSuccess(true);
-      setAlert({ message: "Your message is blooming in our inbox!" });
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-        image: null,
-      });
-      setTimeout(() => setAlert(null), 3000);
-    } catch (err) {
-      console.error("Failed to send message:", err);
-      setAlert({ message: "Failed to send message" });
-    }
+    console.log('Feedback submitted:', formData);
+    alert('Thank you for your feedback!');
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      satisfaction: '',
+      like: '',
+      improve: '',
+      recommend: '',
+      comments: '',
+      contactPermission: '',
+    });
   };
 
-  return (
-    <>
-      <NotificationBubble
-        message={alert?.message}
-        onClose={() => setAlert(null)}
-      />
-      <div className="contact">
-      <motion.div
-  className="contact-container"
-  initial={{ rotateY: -90, opacity: 0 }}
-  animate={{ rotateY: 0, opacity: 1 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
->
-
-          <h2>We Value Your Feedback</h2>
-          <p>
-            Help Velvet Bloom grow by sharing your thoughts! Whether it’s a kind
-            word, a suggestion, or a snapshot of the bouquet you received — we’d
-            love to hear from you. Your feedback helps us blossom better every
-            day.
-          </p>
-
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <input
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              type="text"
-              placeholder="Your Name"
-              required
-            />
-            <input
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              type="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Your Message"
-              rows="5"
-              required
-            ></textarea>
-            <input
-              type="file"
-              name="image"
-              accept="image/*"
-              onChange={(e) =>
-                setFormData((prev) => ({
-                  ...prev,
-                  image: e.target.files[0],
-                }))
-              }
-            />
-            <div className="rating-section">
-              <label>Rate Your Experience:</label>
-              <div className="stars">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <span
-                    key={star}
-                    onClick={() =>
-                      setFormData((prev) => ({
-                        ...prev,
-                        rating: star,
-                      }))
-                    }
-                    className={formData.rating >= star ? "filled" : ""}
-                  >
-                    ★
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              onClick={() => {
-                setAlert({ message: "Message sent successfully" });
-                setTimeout(() => setAlert(null), 3000);
-              }}
-            >
-              Send Message
-            </button>
-          </form>
-        </motion.div>
-
-        <motion.div
-    className="contact-info"
-    initial={{ x: 100, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-  >
-          <h4>
-            For more information or inquiries, feel free to reach out to us:
-          </h4>
-          <p>
-            <strong>Email:</strong> hello@velvetbloom.com
-          </p>
-          <p>
-            <strong>Phone:</strong> +1 (234) 567-8901
-          </p>
-          <p>
-            <strong>Location:</strong> 123 Blossom Avenue, Garden City
-          </p>
-          <img src="https://static.vecteezy.com/system/resources/previews/044/619/749/non_2x/bouquet-of-lavender-flowers-png.png" alt="flower" />
-        </motion.div>
-      </div>
-    </>
-  );
+  
+   
 };
 
-export default Contact;
+export default FeedbackForm;
