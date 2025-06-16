@@ -11,7 +11,7 @@ import { SiCodefresh } from "react-icons/si";
 const Card = ({ product }) => {
   const [alert, setAlert] = useState(null);
   const navigate = useNavigate();
-  const { addToWishlist, wishlist,url } = useContext(CartContext);
+  const { addToWishlist, wishlist, url } = useContext(CartContext);
 
   const handleClick = () => {
     if (product._id) {
@@ -21,6 +21,7 @@ const Card = ({ product }) => {
     }
   };
 
+  if (!product) return null;
   return (
     <>
       <NotificationBubble
@@ -30,7 +31,7 @@ const Card = ({ product }) => {
       <div className="collection-card" onClick={handleClick}>
         {product.isNew && (
           <div className="badge new">
-            New <SiCodefresh  />
+            New <SiCodefresh />
           </div>
         )}
         {product.isTrending && (
@@ -43,18 +44,18 @@ const Card = ({ product }) => {
           onClick={(e) => {
             e.stopPropagation();
             addToWishlist(product._id);
-            setAlert({ message:" Saved to your bouquet of wishes !!"});;
+            setAlert({ message: " Saved to your bouquet of wishes !!" });
             setTimeout(() => setAlert(null), 3000);
           }}
         >
           {(
             Array.isArray(wishlist)
               ? wishlist.includes(product._id)
-              : wishlist[product._id]
+              : wishlist?.[product._id]
           ) ? (
-            <BsHeartFill color="#8a5ca6" className="heart" />
+            <BsHeartFill color="#c27979" className="heart" />
           ) : (
-            <BsHeart color="#8a5ca6" className="heart" />
+            <BsHeart color="#c27979" className="heart" />
           )}
         </div>
         <Link to={`/product/${product._id}`}>
@@ -72,17 +73,7 @@ const Card = ({ product }) => {
 
           <div className="price-rating">
             <p className="collection-price">₹{product.price}</p>
-            {product.averageRating > 0 ? (
-              <p className="avg-rating">{product.averageRating} ★</p>
-            ) : (
-              <p className=""></p>
-            )}
           </div>
-
-          <p className="delivery">
-             From our garden to your door-step on same-day...
-            <MdDeliveryDining fontSize="20px" />
-          </p>
         </div>
       </div>
     </>
