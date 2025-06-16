@@ -5,30 +5,30 @@ import Card from "../card/Card";
 import RealisticFlowerLoader from "../productdetail/Flower";
 
 const ProductGrid = ({ url }) => {
-  const [flowers, setFlowers] = useState([]);
+  const [cake, setCake] = useState([]);
   const [activate, setActivate] = useState("new");
   const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-    const fetchFlowers = async () => {
+    const fetchCake = async () => {
       setLoading(true); 
       try {
-        const res = await axios.get(`${url}/api/flower/list`);
+        const res = await axios.get(`${url}/api/cake/list`);
         if (res.data.success) {
-          setFlowers(res.data.data);
+          setCake(res.data.data);
         }
       } catch (error) {
-        console.error("Failed to fetch flowers:", error);
+        console.error("Failed to fetch items:", error);
       } finally {
         setLoading(false); 
       }
     };
 
-    fetchFlowers();
+    fetchCake();
   }, [url]);
 
-  const newArrivals = flowers.filter((item) => item.isNew);
-  const trending = flowers.filter((item) => item.isTrending);
+  const newArrivals = cake.filter((item) => item.isNew);
+  const trending = cake.filter((item) => item.isTrending);
 
   return (
     <div className="product-container" id="arrivals">
