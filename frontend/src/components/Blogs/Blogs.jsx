@@ -12,8 +12,8 @@ export default function Blogs() {
 
   return (
     <div className="flower-blogs">
-      <h1 className="page-title">Bloom Blog</h1>
-      <p className="subtitle">Tips, inspiration & floral love</p>
+<h1 className="page-title">The ChocoLush Journal</h1>
+<p className="subtitle">Behind the bakes: stories, tips & sweetness</p>
       <input
         type="text"
         placeholder="Search blog posts..."
