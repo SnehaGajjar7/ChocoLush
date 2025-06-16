@@ -3,18 +3,12 @@ import "./PlaceOrder.css";
 import { CartContext } from "../../context/CartContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import DeliveryOptions from "../../components/productdetail/DeliveryOptions";
 
 const PlaceOrder = () => {
   const { getTotalCartAmount, token, collections, cartItems, url } =
     useContext(CartContext);
   const navigate = useNavigate();
-  const [delivery, setDelivery] = useState({
-    selectedDay: "",
-    selectedDate: "",
-    deliveryType: "",
-    fixedSlot: "",
-  });
+
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -36,14 +30,6 @@ const PlaceOrder = () => {
   const placeOrder = async (event) => {
     event.preventDefault();
 
-    if (!delivery.selectedDay || !delivery.deliveryType) {
-      alert("Please select delivery day and delivery type");
-      return;
-    }
-    if (delivery.deliveryType === "fixed" && !delivery.fixedSlot) {
-      alert("Please select a time slot for fixed delivery");
-      return;
-    }
 
     let orderItems = [];
     collections.forEach((item) => {
@@ -61,7 +47,6 @@ const PlaceOrder = () => {
       userName: `${data.firstName} ${data.lastName}`,
       userEmail: data.email,
       userPhone: data.contact,
-      delivery: delivery, 
     };
 
     if (!data.firstName || !data.email || !data.street || !data.contact) {
@@ -171,7 +156,7 @@ const PlaceOrder = () => {
           type="number"
           placeholder="Contact Number"
         />
-        <DeliveryOptions onDeliveryChange={setDelivery} />
+
       </div>
       <div className="place-order-right">
         <div className="cart-total">
