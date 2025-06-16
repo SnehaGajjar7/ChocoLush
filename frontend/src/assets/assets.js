@@ -15,105 +15,102 @@ export const assets = {
 export const mockBlogs = [
   {
     id: 501,
-    title: "Top 10 Flowers for Spring",
-    excerpt: "Brighten your garden and mood with these spring beauties.",
-    image:
-      "https://www.odealarose.com/blog/wp-content/uploads/2024/10/best-flowers-for-new-baby.jpg",
-    date: "2025-03-15",
-    tags: ["Spring", "Tips"],
+    title: "Baking with Love: The Story Behind ChocoLush",
+    excerpt: "Get a behind-the-scenes look at how our bakery began and what inspires every treat we make.",
+    image: "https://t4.ftcdn.net/jpg/14/19/39/53/360_F_1419395393_d0c5xmGEsd0h9sODfxmIle73REYGTWOl.jpg",
+    date: "2025-04-02",
+    tags: ["Story", "Inspiration"],
     content:
-      "Spring is the season of renewal, and there’s no better way to celebrate it than with fresh, vibrant flowers. Our top 10 picks include tulips, daffodils, and hyacinths—classic spring blooms known for their color and charm. Peonies, pansies, and ranunculus add elegance and texture, while crocuses and anemones offer early pops of color. Irises and lilies round out the list with their striking beauty. Whether you’re decorating your garden or brightening up your home, these flowers bring life, fragrance, and joy to any space. Embrace the season and let these blooms inspire your spring refresh!",
+      "ChocoLush started as a dream in a tiny kitchen filled with the aroma of freshly baked brownies. What began as a weekend hobby turned into a beloved neighborhood bakery. The secret? Love and passion kneaded into every batch. From handpicking ingredients to frosting cakes at midnight, each product tells a story. We believe that baking is not just about following recipes—it's about adding warmth, memories, and care to every bite. As our bakery grew, so did our commitment to quality, creativity, and connection. Welcome to ChocoLush, where every treat is made with heart and sprinkled with a little magic."
   },
   {
     id: 502,
-    title: "The Language of Flowers",
-    excerpt: "Discover the secret meanings behind your favorite blooms.",
-    image:
-      "https://cdn0.hitched.co.uk/vendor/3821/3_2/640/jpeg/lilac-bouquet_4_373821-173626386163178.jpeg",
+    title: "The Art of Layered Cakes",
+    excerpt: "Explore what makes a layered cake so magical—from sponge to swirl.",
+    image: "https://media.istockphoto.com/id/1132472016/photo/close-up-cross-section-of-fresh-rainbow-layer-cake-at-food-market.jpg?s=612x612&w=0&k=20&c=cOxZZyyDaTjNeZTizlEv0Q7sA_pKu5wpuziXfS3sKDA=",
     date: "2025-04-10",
-    tags: ["Meaning", "Romance"],
+    tags: ["Layered Cake", "Technique"],
     content:
-      "Flowers have long been used to express emotions where words fall short. Known as floriography, the “language of flowers” was especially popular in the Victorian era. Each bloom carries a unique meaning—roses for love, lilies for purity, and tulips for admiration. A carefully chosen bouquet can tell a story, convey sympathy, or celebrate joy. Understanding this silent language adds depth to every floral arrangement. Whether gifting or gardening, knowing a flower’s symbolism allows you to connect more meaningfully. This spring, let flowers do the talking, and express your feelings with nature’s most beautiful messengers.",
+      "Layered cakes are a symphony of textures and flavors. Each tier is a balance between soft sponge, creamy filling, and smooth frosting. Creating the perfect layered cake involves precision, patience, and creativity. Whether it's a classic chocolate truffle or a fruity mango delight, each layer adds depth and delight. At ChocoLush, our layered cakes are handcrafted with love and flair, designed not just to satisfy the palate but to impress the eye. They're perfect for celebrations, surprises, and sweet indulgences."
   },
   {
     id: 503,
-    title: "How to Care for Cut Flowers",
-    excerpt: "Keep your bouquet fresh longer with these simple steps.",
-    image:
-      "https://www.floretflowers.com/wp-content/uploads/2016/10/Floret_ErinChrisFloret-FULL-SESSION-0174.jpg",
-    date: "2025-05-01",
-    tags: ["Care", "Guide"],
+    title: "Buttercream vs. Whipped Cream: What’s the Difference?",
+    excerpt: "Not sure what frosting to pick? We break down the two most beloved toppings.",
+    image: "https://cdn.shopify.com/s/files/1/0054/1589/5138/files/SmartSelect_20211023-210355_YouTube_1024x1024.jpg?v=1635003716",
+    date: "2025-04-17",
+    tags: ["Frosting", "Tips"],
     content:
-      "Cut flowers bring beauty and freshness indoors, but without proper care, they wilt quickly. To extend their life, start by trimming the stems at an angle and removing any leaves below the waterline. Use clean vases and change the water every two days. Keep your flowers away from direct sunlight, heat, and fruit, which emits ethylene gas that speeds up wilting. Adding flower food or a homemade mix of sugar and vinegar can nourish the blooms. With these simple steps, your bouquet will stay vibrant longer, letting you enjoy the color and fragrance of fresh flowers day after day.",
+      "Choosing between buttercream and whipped cream can make or break your cake experience. Buttercream is rich, stable, and great for decorating, while whipped cream is light, airy, and delicate. Buttercream can hold intricate piping and withstand warmer conditions. Whipped cream, on the other hand, is best enjoyed chilled and adds a refreshing finish. At ChocoLush, we use both, depending on the style and mood of the cake. Understanding the texture, flavor, and use-case for each helps you pick the perfect topping for any occasion."
   },
   {
     id: 504,
-    title: "DIY Floral Centerpieces",
-    excerpt: "Impress your guests with handmade floral decor.",
-    image:
-      "https://media.istockphoto.com/id/1351158595/photo/florist-making-fashion-modern-bouquet-of-different-flowers.jpg?s=612x612&w=0&k=20&c=uxB6FE1W0Iue2qrXW_CPTEgJLcgvT7jlvqyW1oTDnXk=",
-    date: "2025-04-25",
-    tags: ["DIY", "Decor"],
+    title: "Mini Cakes: Big Flavor in Small Packages",
+    excerpt: "Why go big when you can have an entire cake to yourself?",
+    image: "https://qatar.sugarmoo.com/cdn/shop/files/baby_cake_bundle_1__1.jpg?v=1722080604&width=3840",
+    date: "2025-05-01",
+    tags: ["Mini Cakes", "Trends"],
     content:
-      "Creating your own floral centerpiece is a fun and personalized way to decorate for any occasion. Start by selecting flowers that match your theme and color palette, such as roses, daisies, or tulips. Choose a vase or container that complements your setting. Trim the stems at an angle and arrange the flowers in a balanced design, ensuring taller blooms are in the center. Add greenery for a fuller look and consider filling the base with decorative stones or water beads for an extra touch. Whether for a wedding, dinner party, or everyday decor, DIY centerpieces are easy to create and enjoyable to display.",
+      "Mini cakes are the ultimate personalized dessert experience. Each one is a tiny masterpiece, crafted with the same care as a full-sized cake. They’re perfect for intimate celebrations, gifting, or just treating yourself without sharing. Popular in weddings and parties, these bite-sized delights come in diverse flavors like red velvet, mocha fudge, and lemon zest. ChocoLush offers beautifully decorated minis that taste just as incredible as they look. It's a trend that's here to stay—and your taste buds will thank you."
   },
   {
     id: 505,
-    title: "Best Flowers for Wedding Bouquets",
-    excerpt: "Elegant floral picks to make your big day bloom.",
-    image:
-      "https://images.squarespace-cdn.com/content/v1/5c131a06a2772c0a60053645/d28ed92e-bd50-430f-83a0-3371a34fa885/Kara-and-Peter-Wedding-Bridal-Bouq.JPG?format=2500w",
-    date: "2025-05-05",
-    tags: ["Wedding", "Occasions"],
+    title: "Baking for Beginners: Essentials You Need",
+    excerpt: "Starting your baking journey? Here’s what you need in your toolkit.",
+    image: "https://www.sweetandsavorybyshinee.com/wp-content/uploads/2020/10/Kitchen-Tools-Gadgets-5.jpg",
+    date: "2025-05-12",
+    tags: ["Beginner", "Tools"],
     content:
-      "Choosing the right flowers for your wedding bouquet can set the tone for your big day. Popular choices include roses for their timeless elegance, peonies for a romantic, soft look, and lilies for a touch of sophistication. Tulips symbolize perfect love and are a great addition for spring weddings. For a unique twist, incorporate orchids or dahlias for a more exotic flair. Consider the season when selecting flowers—seasonal blooms are often more affordable and fresh. Personalize your bouquet by adding greenery like eucalyptus or ivy for texture and depth, creating a beautiful arrangement that complements your wedding theme.",
+      "If you’re just stepping into the world of baking, having the right tools is essential. Start with measuring cups, mixing bowls, a good whisk, and baking pans. A hand mixer helps with smoother batters, while silicone spatulas are perfect for scraping every bit of dough. Don’t forget parchment paper, cooling racks, and a reliable oven thermometer. Baking is both science and art—and these essentials will set you up for sweet success. Remember, every expert baker started with one perfect cookie!"
   },
   {
     id: 506,
-    title: "How to Choose the Perfect Flowers for Your Partner",
-    excerpt:
-      "Discover romantic flower choices that express love, admiration, and personality.",
-    image:
-      "https://windflowerflorist.com/cdn/shop/articles/unnamed_a31e1273-2c24-4cd3-b3c2-fe22e529f9c0_1600x.jpg?v=1733213612",
-    date: "2025-05-08",
-    tags: ["Romance", "Gift Guide", "Relationships"],
+    title: "From Oven to Heart: Why Fresh Matters",
+    excerpt: "Discover why freshness is the secret ingredient in every ChocoLush bake.",
+    image: "https://glenindia.com/a/blog/media/glen-india.myshopify.com/Post/featured_img/image4-9.jpg",
+    date: "2025-05-19",
+    tags: ["Freshness", "Quality"],
     content:
-      "Choosing the perfect flowers for your partner is a thoughtful way to express your feelings. Consider their favorite flowers or the color that suits their personality. Red roses are a classic symbol of love, while pink roses convey admiration and gratitude. For something more unique, lilies represent purity, and sunflowers symbolize loyalty and happiness. If you're celebrating a special occasion like an anniversary, consider pairing flowers with a personal message. Always think about the symbolism behind each flower and how it aligns with your relationship, ensuring your bouquet is not only beautiful but meaningful as well.",
+      "Fresh ingredients make all the difference. At ChocoLush, we bake everything daily to ensure every bite is moist, flavorful, and comforting. From free-range eggs to Belgian chocolate and seasonal fruits, our ingredients are chosen with care. We avoid preservatives and mass production—favoring flavor over shelf life. You’ll taste the difference in our warm brownies, soft cookies, and melt-in-your-mouth cakes. Fresh isn’t just a word—it’s our promise."
   },
   {
     id: 507,
-    title: "How to Make Your Own Flower Crown",
-    excerpt:
-      "A fun and creative guide to crafting beautiful flower crowns for festivals, weddings, or everyday whimsy.",
-    image:
-      "https://www.save-on-crafts.com/cdn/shop/articles/how-to-make-a-flower-crown-103_6ff80b00-eed1-426c-993a-2836c3bc8898_600x.jpg?v=1743109516",
-    date: "2025-05-10",
-    tags: ["DIY", "Craft", "Floral Accessories"],
+    title: "Decorating Cakes: Tips from Our Head Baker",
+    excerpt: "Learn secrets of beautiful cake decorations from the masters at ChocoLush.",
+    image: "https://www.escoffieronline.com/wp-content/uploads/2015/03/Pastry-chef-putting-pink-icing-on-a-cake-1024x683.jpg",
+    date: "2025-05-23",
+    tags: ["Decorating", "Tips"],
     content:
-      "Creating your own flower crown is a fun and creative way to express yourself with nature. Start by selecting fresh flowers that complement your style, such as roses, daisies, or lavender. You’ll also need floral wire, floral tape, and ribbon. Begin by measuring the wire to fit your head and create a circular base. Next, trim the flower stems and attach them to the wire with floral tape. Continue adding flowers, varying the sizes and colors, until your crown is full. Finish by tying a ribbon at the back, and you’ll have a beautiful, personalized flower crown!",
+      "Decorating a cake is an art form, and our head baker shares her top tips for creating stunning designs. Always start with a chilled cake for easy frosting. Use an offset spatula for smooth finishes and piping bags for detailed work. Gel colors work best for vibrant shades. Want a minimalist look? Try the semi-naked style. Prefer florals? Fresh edible flowers or piped rosettes add elegance. With patience, practice, and the right tools, your cake can look as amazing as it tastes."
   },
-
   {
     id: 508,
-    title: "Top 5 Mistakes to Avoid When Watering Flowers",
-    excerpt:
-      "Keep your blooms healthy and vibrant by avoiding these common watering errors.",
-    image: "https://cdn.mos.cms.futurecdn.net/nzFpKJ5gWPkdsGDLz3QNRj.jpg",
-    date: "2025-05-12",
-    tags: ["Flower Care", "Gardening Tips"],
+    title: "The Rise of Gluten-Free Baking",
+    excerpt: "Explore how we're baking delicious cakes and cookies for every dietary need.",
+    image: "https://backend.novonesis.com/sites/default/files/styles/large_proportional/public/image/2025-01/Gluten_free.png.webp?itok=ipeYQFqO",
+    date: "2025-05-26",
+    tags: ["Gluten-Free", "Health"],
     content:
-      "Watering flowers may seem simple, but it’s easy to make mistakes that can harm your plants. One common mistake is overwatering, which leads to root rot and wilting. Another issue is underwatering, causing flowers to dry out. Using cold water can shock plants, so always use room-temperature water. Additionally, watering during the heat of the day can cause the water to evaporate too quickly. Finally, don’t forget to check the soil moisture before watering — flowers thrive when their roots are neither too dry nor too soggy. Avoid these mistakes for healthier, happier blooms.",
+      "Gone are the days when gluten-free meant taste-free. At ChocoLush, we’ve embraced alternative flours like almond, oat, and rice to create treats everyone can enjoy. From fudgy brownies to citrus pound cakes, our gluten-free range is crafted with flavor in mind. Whether you have dietary restrictions or just prefer a lighter option, we make sure no one misses out on dessert. Taste, texture, and joy—without the gluten."
   },
   {
     id: 509,
-    title: "Best Flowers for Valentine’s Day",
-    excerpt:
-      "Explore the most romantic blooms to express your love this Valentine’s Day — from classic roses to unique surprises.",
-    image:
-      "https://static.vecteezy.com/system/resources/thumbnails/038/052/239/small_2x/ai-generated-smiling-man-gives-flowers-to-woman-on-valentine-s-day-free-photo.jpeg",
-    date: "2025-02-10",
-    tags: ["Romance", "Valentine's Day", "Gifting"],
+    title: "Seasonal Favorites: What’s Baking This Summer",
+    excerpt: "A peek into our summer specials—light, fruity, and oh-so-refreshing.",
+    image: "https://www.realsimple.com/thmb/ygTBrqzYmP9TajGUU_rwJz7b96E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/summer-dessert-recipes-463cc076aa8f42e09894eb7422eb8134.jpg",
+    date: "2025-06-01",
+    tags: ["Seasonal", "Summer"],
     content:
-      "Valentine’s Day is synonymous with romance, and flowers are the perfect gift to express your feelings. The most popular choice is red roses, symbolizing love and passion. However, pink roses convey admiration and appreciation, while white roses stand for purity and new beginnings. For something unique, consider tulips, which represent perfect love, or lilies, symbolizing devotion. Carnations are another great option, known for their long-lasting beauty. Orchids, with their exotic allure, are perfect for a modern twist. No matter the flower, choosing the right bloom shows thoughtfulness and care on this special day.",
+      "Summer at ChocoLush is all about bright flavors and refreshing treats. Think lemon curd cupcakes, mango mousse cakes, and berry-studded tarts. We use seasonal produce to create bakes that are light, zesty, and perfect for warm days. Pair a chilled raspberry cheesecake with an iced latte and you’ve got the ultimate afternoon treat. Our summer menu rotates often, so there’s always something fresh and fruity waiting for you."
   },
+  {
+    id: 510,
+    title: "Why Cookies Never Go Out of Style",
+    excerpt: "Soft, chewy, crunchy, or filled—cookies remain everyone’s favorite.",
+    image: "https://s.yimg.com/ny/api/res/1.2/eUCE2tddzZud7Kgl3j6jbg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02OTk-/https://s.yimg.com/os/creatr-uploaded-images/2024-11/7400b550-a233-11ef-bdcc-47cac5a023db",
+    date: "2025-06-10",
+    tags: ["Cookies", "Classic"],
+    content:
+      "Cookies are timeless. Whether it's a gooey chocolate chip, a buttery shortbread, or a cream-filled sandwich, cookies hit the sweet spot like nothing else. They’re perfect for gifting, snacking, or dunking into your favorite drink. At ChocoLush, our cookie menu is always evolving—from seasonal twists like peppermint crinkle to classics like double chocolate fudge. Their simplicity, versatility, and nostalgic charm are what make cookies a bakery staple across generations."
+  }
 ];
