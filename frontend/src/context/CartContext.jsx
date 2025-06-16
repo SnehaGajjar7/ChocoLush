@@ -10,7 +10,7 @@ const CartContextProvider = (props) => {
   const [collections, setCollection] = useState([]);
   const [wishlist, setWishlist] = useState([]);
 
-  const addToCart = async (itemId, deliveryInfo) => {
+  const addToCart = async (itemId) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev };
       updatedCart[itemId] = (updatedCart[itemId] || 0) + 1;
@@ -21,7 +21,7 @@ const CartContextProvider = (props) => {
       try {
         await axios.post(
           `${url}/api/cart/add`,
-          { itemId, deliveryInfo },
+          { itemId},
           { headers: { token } }
         );
       } catch (error) {
@@ -68,16 +68,23 @@ const CartContextProvider = (props) => {
     return totalAmount;
   };
 
-  const fetchFlowerList = async () => {
-    const response = await axios.get(url + "/api/flower/list");
-
-    const products = response.data.data.map((product) => ({
-      ...product,
-      id: product._id,
-    }));
-
-    setCollection(products);
+  const fetchCakeList = async () => {
+    try {
+      const response = await axios.get(url + "/api/cake/list");
+      const products = response.data.data.map((product) => ({
+        ...product,
+        id: product._id,
+      }));
+      setCollection(products);
+    } catch (error) {
+      console.error("Error fetching cake list:", error);
+    }
   };
+
+  useEffect(() => {
+    fetchCakeList();
+  }, []);
+
 
   const loadCartData = async (token) => {
     try {
@@ -130,7 +137,7 @@ const CartContextProvider = (props) => {
 
   useEffect(() => {
     async function loadData() {
-      await fetchFlowerList();
+      await fetchCakeList();
       if (localStorage.getItem("token")) {
         setToken(localStorage.getItem("token"));
         await loadCartData(localStorage.getItem("token"));
