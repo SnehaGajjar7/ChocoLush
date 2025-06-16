@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
 import "./Bottom.css";
-import { FaSeedling, FaTruck, FaGift, FaHeart } from "react-icons/fa"; 
+import { FaBirthdayCake, FaTruck, FaGift, FaCookieBite } from "react-icons/fa";
 
 const Bottom = () => {
   const messages = [
     {
-      text: "Experience the joy of fresh blooms — delivered to your doorstep daily.",
-      icon: <FaSeedling />,
+      text: "Freshly baked joy — delivered warm to your door.",
+      icon: <FaBirthdayCake />,
     },
     {
-      text: "Turn everyday moments into memories with our handcrafted floral designs.",
-      icon: <FaHeart />,
+      text: "Turn sweet cravings into special moments with our artisan treats.",
+      icon: <FaCookieBite />,
     },
     {
-      text: "Enjoy 10% off your first order — because your story deserves a beautiful start.",
+      text: "Enjoy 10% off your first order — because sweetness should be shared.",
       icon: <FaGift />,
     },
     {
-      text: "Complimentary delivery on all orders above ₹999 — because elegance should arrive effortlessly.",
+      text: "Free delivery on orders above ₹999 — from our oven to your home.",
       icon: <FaTruck />,
     },
   ];
@@ -35,9 +35,8 @@ const Bottom = () => {
   return (
     <div className="bottom-message-bar">
       <p>
-      {messages[currentMessageIndex].text}
-        <span className="icon">{messages[currentMessageIndex].icon}</span>{" "}
-        
+        {messages[currentMessageIndex].text}
+        <span className="icon">{messages[currentMessageIndex].icon}</span>
       </p>
     </div>
   );
