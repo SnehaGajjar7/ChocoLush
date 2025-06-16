@@ -6,9 +6,9 @@
     height: 50px;
     padding: 10px 0;
     font-size: 14px;
-    font-weight: 600;
     animation: fadeInOut 1s ease-in-out;
     transition: all 0.5s ease-in-out;
+    font-family: 'Pacifico', cursive;
   }
   
   .bottom-message-bar p {
