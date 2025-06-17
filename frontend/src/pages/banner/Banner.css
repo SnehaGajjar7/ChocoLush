@@ -1,57 +1,51 @@
-/* Banner.css */
-
 .summer-specials-page {
   padding: 40px 20px;
-  max-width: 1200px;
+  max-width: 70%;
   margin: 0 auto;
-  background: #fff8f2;
-  font-family: 'Poppins', sans-serif;
 }
 
 .summer-header {
   text-align: center;
   margin-bottom: 30px;
-  color: #d95f5f;
-  animation: fadeInDown 0.6s ease;
+  color: var(--main);
 }
 
 .summer-header h1 {
   font-size: 2.5rem;
-  color: #ff8a65;
+  color: var(--main);
   font-weight: 700;
 }
 
 .summer-header p {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--gray);
   margin-top: 10px;
+  font-family: 'Pacifico', cursive;
 }
 
 .summer-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: 70px;
+  grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
 }
 
 .see-more-btn {
   display: block;
   margin: 0 auto;
-  background: linear-gradient(135deg, #ffccbc, #ff8a65);
+  background: var(--main);
   color: white;
+  border: 1px solid var(--main);
   font-weight: 600;
   padding: 12px 24px;
-  border: none;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 6px 12px rgba(255, 138, 101, 0.4);
-  transition: all 0.3s ease;
 }
 
 .see-more-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(255, 138, 101, 0.5);
+  background: white;
+  color: var(--main);
+  border: 1px solid var(--main);
 }
 
 /* Optional fade-in animation */
