@@ -2,7 +2,7 @@ import contactModel from "../model/contactModel.js";
 
 const submitMessage = async (req, res) => {
   try {
-    const { name, email, message, rating } = req.body;
+    const { name, email, message, rating, city, contact } = req.body;
     const imagePath = req.file ? req.file.path.replace("\\", "/") : null;
 
     const newMessage = new contactModel({
@@ -10,7 +10,9 @@ const submitMessage = async (req, res) => {
       email,
       message,
       imagePath,
-      rating: parseInt(rating) || 0, // Convert to number and fallback to 0
+      rating: parseInt(rating) || 0,
+      city,
+      contact,
     });
 
     await newMessage.save();
