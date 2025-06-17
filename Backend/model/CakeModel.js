@@ -22,9 +22,6 @@ const cakeSchema = new mongoose.Schema(
     image: { type: String, required: true },
     isNew: { type: Boolean, default: false },
     isTrending: { type: Boolean, default: false },
-    reviews: [reviewSchema],
-    rating: { type: Number, default: 0 },
-    numReviews: { type: Number, default: 0 },
     stock: { type: Number, default: 0 }
   },
   {
