@@ -14,34 +14,40 @@ const addCake = async (req, res) => {
       price,
       category,
       contains,
-      image,
       isNew,
       isTrending,
       stock,
     } = req.body;
 
-    if (!image) {
+    // ✅ Get the uploaded image from multer
+    const imageFile = req.files?.image?.[0];
+    if (!imageFile) {
       return res
         .status(400)
-        .json({ success: false, message: "Image is required" });
+        .json({ success: false, message: "Image file is required" });
     }
+
+const cleanedContains = typeof contains === "string"
+  ? contains.split(",").map(item => item.trim())
+  : contains;
 
     const cake = new cakeModel({
       name,
       description,
       price,
       category,
-      contains,
-      image, // directly from req.body
+      contains: cleanedContains,
+      image: imageFile.filename,
       isNew,
       isTrending,
       stock,
     });
+    
 
     await cake.save();
     res.json({ success: true, message: "Item added" });
   } catch (error) {
-    console.error("Error in add:", error);
+    console.error("Error in addCake:", error);
     res.status(500).json({ success: false, message: "Internal server error" });
   }
 };
@@ -50,23 +56,7 @@ const listCake = async (req, res) => {
   try {
     const cakes = await cakeModel.find({});
 
- 
-    const cakesWithRatings = cakes.map((cake) => {
-      const avg =
-        cake.reviews.length > 0
-          ? (
-              cake.reviews.reduce((sum, review) => sum + review.rating, 0) /
-              cake.reviews.length
-            ).toFixed(1)
-          : 0;
-
-      return {
-        ...cake._doc,
-        averageRating: avg,
-      };
-    });
-
-    res.json({ success: true, data: cakesWithRatings });
+    res.json({ success: true, data:cakes });
   } catch (error) {
     console.log(error);
     res.status(500).json({ success: false, message: "Error fetching item" });
@@ -121,50 +111,7 @@ const getCakeById = async (req, res) => {
   }
 };
 
-const createReview = async (req, res) => {
-  try {
-    const cake = await cakeModel.findById(req.params.id);
-    if (!cake) {
-      return res
-        .status(404)
-        .json({ success: false, message: "item not found" });
-    }
 
-    const { rating, comment } = req.body;
-    if (!rating || !comment) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Rating and comment required" });
-    }
-    const user = await userModel.findById(req.userId);
-    if (!user) {
-      return res
-        .status(404)
-        .json({ success: false, message: "User not found" });
-    }
-
-    const newReview = {
-      user: req.userId,
-      name: user.name,
-      rating,
-      comment,
-      createdAt: new Date(),
-    };
-
-    cake.reviews.push(newReview);
-    cake.numReviews = cake.reviews.length;
-    cake.rating =
-      cake.reviews.reduce((acc, item) => acc + item.rating, 0) /
-      cake.reviews.length;
-
-    await cake.save();
-
-    res.json({ success: true, message: "Review added", data: cake });
-  } catch (error) {
-    console.error("Error adding review:", error);
-    res.status(500).json({ success: false, message: "Server error" });
-  }
-};
 
 const getRelatedCakes = async (req, res) => {
   try {
@@ -197,7 +144,7 @@ export {
   listCake,
   removeCake,
   getCakeById,
-  createReview,
+ 
   getRelatedCakes,
   multiple,
 };
