@@ -1,8 +1,7 @@
 import express from "express";
 import multer from "multer";
 import fs from "fs";
-import authMiddleware from "../middleware/auth.js";
-import {addCake, createReview, getCakeById, getRelatedCakes, listCake, multiple, removeCake } from "../controller/CakeController.js";
+import {addCake, getCakeById, getRelatedCakes, listCake, multiple, removeCake } from "../controller/CakeController.js";
 
 const cakeRouter = express.Router();
 
@@ -31,7 +30,6 @@ cakeRouter.post(
 cakeRouter.get("/list",listCake)
 cakeRouter.post("/remove",removeCake)
 cakeRouter.get("/:id",getCakeById)
-cakeRouter.post("/:id/reviews", authMiddleware, createReview);
 cakeRouter.get("/:id/related", getRelatedCakes);
 cakeRouter.post("/multiple", multiple);
 
