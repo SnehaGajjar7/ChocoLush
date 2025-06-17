@@ -10,9 +10,9 @@ const SummerSpecials = () => {
   const navigate = useNavigate();
 
   const summerItemIds = [
-    "684bea035202d714836ffab5",
-    "684bfd0a5202d714836ffaef",
-    "684c17871b64d7385757a340"
+    "684fdc70decdc24c255c6b3a",
+    "684fcf21decdc24c255c6b11",
+    "684ff691decdc24c255c6c29",
   ];
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const SummerSpecials = () => {
   return (
     <div className="summer-specials-page">
       <div className="summer-header">
-        <h1>Summer Bakery Specials ☀️</h1>
+        <h1>Summer Bakery Specials </h1>
         <p>Delight in seasonal treats crafted just for summer!</p>
       </div>
 
