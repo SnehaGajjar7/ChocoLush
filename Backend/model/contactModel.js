@@ -7,7 +7,8 @@ const contactSchema = new mongoose.Schema({
   imagePath: String,  // new field for image
   createdAt: { type: Date, default: Date.now },
   rating: { type: Number, default: 0 },
-
+  city: String,
+  contact: Number,
 });
 
 
