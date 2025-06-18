@@ -6,7 +6,8 @@ import {
   MdOutlineKeyboardDoubleArrowRight,
 } from "react-icons/md";
 import { CartContext } from "../../context/CartContext";
-import RealisticFlowerLoader from "../../components/productdetail/Flower";
+import BakeryLoader from "../../components/productdetail/Flower";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 const Feedback = () => {
   const [messages, setMessages] = useState([]);
@@ -35,7 +36,7 @@ const Feedback = () => {
 
   const visibleMessages = messages.slice(currentIndex, currentIndex + 3);
 
-  if (loading) return <RealisticFlowerLoader />;
+  if (loading) return <BakeryLoader />;
   if (messages.length === 0)
     return <p className="no-feedback">No feedback yet.</p>;
 
@@ -72,13 +73,19 @@ const Feedback = () => {
                 {Array.from({ length: 5 }, (_, i) => (
                   <span
                     key={i}
-                    className={i < msg.rating ? "star filled" : "star"}
+                    style={{
+                      fontSize: "20px",
+                      color: i < msg.rating ? "#e63946" : "#ccc",
+                      marginRight: "3px",
+                    }}
                   >
-                    ★
+                    {i < msg.rating ? <AiFillHeart color="#e2aaaa"  /> : <AiOutlineHeart  />}
                   </span>
                 ))}
               </div>
+
               <p className="message">“{msg.message}”</p>
+              <p>from {msg.city}</p>
             </div>
           ))}
         </div>
