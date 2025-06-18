@@ -97,10 +97,9 @@
   }
 }
 
-/* Small Screens (Mobiles) */
 @media (max-width: 480px) {
   .header {
-    height: 90vw;
+    height: 120vw;
   }
 
   .header-contents {
