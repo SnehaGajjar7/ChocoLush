@@ -101,7 +101,29 @@ textarea {
 }
 
 .info-sectionlogo{
-  height: 100px;
   width: 250px;
-  margin: 30px;
+
 }
+
+
+.rating-group {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.hearts span {
+  margin-right: 5px;
+}
+
+.hearts span:hover {
+  transform: scale(1.2);
+}
+
+.rating-label {
+  font-size: 14px;
+  color: var(--main);
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+
