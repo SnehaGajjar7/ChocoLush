@@ -1,8 +1,18 @@
 import React from "react";
 import "./About.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/", { replace: false });
+    setTimeout(() => {
+      const section = document.getElementById("product-grid");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
   return (
     <div className="about-page">
       {/* Hero Section */}
@@ -59,9 +69,9 @@ const About = () => {
 
       <section className="about-cta">
         <h2>Visit Us or Order Online</h2>
-        <Link to="/#arrivals" className="btn-primary">
+        <button className="btn-primary" onClick={handleClick}>
           Explore Our Menu
-        </Link>
+        </button>
       </section>
     </div>
   );
