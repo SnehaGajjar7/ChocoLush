@@ -17,9 +17,10 @@ const Footer = () => {
           <ul>
             <li><Link smooth to="/#">Home</Link></li>
             <li><Link smooth to="/#product-grid">Collection</Link></li>
-            <li><Link smooth to="/#gallery">Blog</Link></li>
+            <li><Link smooth to="/blogs">Blog</Link></li>
             <li><Link smooth to="/about">About</Link></li>
             <li><Link smooth to="/#feedback">Feedback</Link></li>
+            <li><Link smooth to="/gallery">Gallery</Link></li>
           </ul>
         </div>
 
