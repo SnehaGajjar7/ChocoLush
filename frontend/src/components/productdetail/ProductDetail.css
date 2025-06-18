@@ -156,7 +156,7 @@
 }
 .related-product {
   display: grid;
-  gap: 30px;
+  /* gap: 30px; */
   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
 }
 
