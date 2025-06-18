@@ -168,4 +168,11 @@
     font-size: 13px;
     text-align: center;
   }
+
+.login-popup-image img {
+    width: 170px;
+    height: 260px;
+    object-fit: contain;
+    border-radius: 8px;
+}
 }
