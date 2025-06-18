@@ -1,30 +1,47 @@
-.real-flower-loader {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-  }
-  
-  .spin-flower {
-    width: 100px;
-    height: 100px;
-    animation: spin 5s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(90deg);
-    }
-    50%{
-        transform: rotate(180deg);
-    }
-    75%{
-        transform: rotate(270deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
+.bakery-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #d16ba5;
+  font-family: "Comic Sans MS", "Poppins", cursive;
+  text-align: center;
+}
+
+.icon-wrapper {
+  position: relative;
+  animation: bounce 1.2s infinite;
+}
+
+.cupcake-icon, .whisk-icon {
+  font-size: 60px;
+  margin: 0 10px;
+}
+
+.whisk-icon {
+  transform: rotate(-20deg);
+  color: var(--light);
+}
+
+.cupcake-icon {
+  color: var(--main);
+}
+
+.loader-text {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: bold;
+  animation: fade 2s infinite;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
