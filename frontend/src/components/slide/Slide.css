@@ -5,7 +5,7 @@
   background-position: center;
   position: relative;
   transition: background-image 1s ease-in-out;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .header::before {
@@ -15,49 +15,55 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.171); 
+  background-color: rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 
 .header-contents {
   position: absolute;
-  top: 67%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1.5vw;
-  width: 70%;
-  animation: fadeIn 3s;
+  gap: 1.2rem;
+  width: 80%;
+  max-width: 900px;
+  animation: fadeIn 2s ease;
   z-index: 2;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 16px;
   padding: 2rem;
 }
 
 .header-contents h2 {
   color: white;
-  font-size: 4rem;
+  font-size: 3.5vw;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
+
 .header-contents p {
   color: white;
-  font-size: 22px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 800px;
 }
 
 .header-contents button {
   border: none;
   color: var(--main);
   font-weight: 700;
-  padding: 0.8rem 1.8rem;
+  padding: 0.8rem 2rem;
   background-color: white;
-  font-size: 20px;
+  font-size: 1.1rem;
   border-radius: 50px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .header-contents button:hover {
@@ -65,34 +71,55 @@
   color: white;
 }
 
-/* Responsive Tweaks */
+/* Medium Screens (Tablets) */
 @media (max-width: 768px) {
   .header {
-    height: 90vw;
+    height: 70vw;
   }
 
   .header-contents {
-    max-width: 80%;
-    gap: 20px;
+    width: 90%;
+    padding: 1.5rem;
+    top: 58%;
+  }
+
+  .header-contents h2 {
+    font-size: 2.2rem;
   }
 
   .header-contents p {
-    font-size: 14px;
+    font-size: 1rem;
+  }
+
+  .header-contents button {
+    font-size: 1rem;
+    padding: 0.7rem 1.8rem;
   }
 }
 
+/* Small Screens (Mobiles) */
 @media (max-width: 480px) {
   .header {
     height: 90vw;
   }
 
   .header-contents {
-    top: 60%;
-    max-width: 90%;
-    gap: 16px;
+    width: 95%;
+    top: 55%;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+
+  .header-contents h2 {
+    font-size: 1.6rem;
+  }
+
+  .header-contents p {
+    font-size: 0.95rem;
   }
 
   .header-contents button {
-    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.4rem;
   }
 }
