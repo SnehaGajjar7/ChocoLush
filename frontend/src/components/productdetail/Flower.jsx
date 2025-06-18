@@ -1,12 +1,17 @@
 import React from "react";
-import "./Flower.css"; // for animation
+import "./Flower.css";
+import { GiCupcake, GiWhisk } from "react-icons/gi";
 
-const RealisticFlowerLoader = () => {
+const BakeryLoader = () => {
   return (
-    <div className="real-flower-loader">
-      <img src="https://i.pinimg.com/736x/94/6c/01/946c01833aeb4c02296619f97879ffd2.jpg" alt="Loading Flower" className="spin-flower" />
+    <div className="bakery-loader">
+      <div className="icon-wrapper">
+        <GiCupcake className="cupcake-icon" />
+        <GiWhisk className="whisk-icon" />
+      </div>
+      <p className="loader-text">Whipping up sweetness just for you...</p>
     </div>
   );
 };
 
-export default RealisticFlowerLoader;
+export default BakeryLoader;
