@@ -11,7 +11,7 @@
   max-height: 400px;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(255, 128, 128, 0.2);
+ 
 }
 
 .profile-banner img {
@@ -35,8 +35,9 @@
   border-radius: 20px;
   padding: 30px;
   max-width: 350px;
-  position: relative; /* Required for absolute children */
+  position: relative; 
   overflow: hidden;
+  min-height: 600px;
 }
 
 .welcome-heading {
@@ -113,8 +114,8 @@
 .profile-cart,
 .profile-wishlist {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+ 
 }
 
 .cart-item-wrapper {
@@ -137,4 +138,3 @@
     width: 100%;
   }
 }
-v
