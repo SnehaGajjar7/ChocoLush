@@ -18,6 +18,8 @@ import MyOrders from "./pages/myOrders/MyOrders";
 import Bottom from "./components/Navbar/Bottom";
 import Profile from "./pages/profile/Profile";
 import About from "./components/About/About";
+import SummerSpecialPage from "./pages/banner/SeasonalSpecial";
+import Gallery from "./pages/Glimpse/GlimpseGallery";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -47,8 +49,10 @@ const App = () => {
           <Route path="/wishlist" element={<WishList />} />
           
           <Route path="/verify" element={<Varify />} />
-          <Route path="/myorders" element={<MyOrders />} />
-          <Route path="/profile" element={<Profile/>} />
+          <Route path="/myorders" element={<MyOrders />}/> 
+         <Route path="/profile" element={<Profile/>} />
+         <Route path="/season" element={<SummerSpecialPage/>} />
+         <Route path="/gallery" element={<Gallery/>} />
         </Routes>
         <Footer />
       </div>
