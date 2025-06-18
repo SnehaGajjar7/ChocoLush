@@ -112,10 +112,13 @@
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  border: 1px solid #7b4f2d;
 }
 
 .btn-primary:hover {
-  background-color: rgba(17, 78, 4, 0.867)
+  background-color: white;
+  border: 1px solid #7b4f2d;
+  color:#7b4f2d;
 }
 /* Values Section Grid */
 .values-grid {
