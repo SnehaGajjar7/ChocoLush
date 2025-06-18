@@ -8,6 +8,13 @@
   --yellow: rgb(231, 189, 111);
   --black: #4a4a4a;
   --gray: #999;
+  --peach: #ffe5d9;
+  --pink: #ffccd5;
+  --choco: #7b3e19;
+  --cream: #fff8f1;
+  --accent: #ffb3c6;
+  --text-dark: #4d2c1d;
+  --text-light: #a1665e;
 }
 
 * {
