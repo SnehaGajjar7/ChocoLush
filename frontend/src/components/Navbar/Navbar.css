@@ -180,12 +180,18 @@
   background-color: black;
 }
 
-/* --- Responsive --- */
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
+    display: flex;
+  
+    justify-content: space-between;
   }
-
+  .navbar .logo {
+    width: 150px;
+    height: auto;
+  }
+  
   .navbar-menu {
     flex-direction: column;
     position: absolute;
@@ -201,6 +207,7 @@
 
   .navbar-menu.open {
     display: flex;
+    
   }
 
   .navbar-menu li {
