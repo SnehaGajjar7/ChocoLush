@@ -64,7 +64,7 @@
 
 .product-grid {
   display: grid;
-  gap: 70px;
+  /* gap: 70px; */
   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
 }
 
