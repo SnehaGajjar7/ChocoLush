@@ -1,5 +1,5 @@
 .product-container {
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
   margin: 0 auto;
   max-width: 90%;
 }
@@ -31,9 +31,9 @@
   left: 50%;
   bottom: -8px;
   transform: translateX(-50%);
-  width: 60%;
+  width: 70%;
   height: 3px;
-  background: linear-gradient(to right, var(--dark),var(--peach));
+  background: linear-gradient(to right, var(--dark), var(--peach));
   border-radius: 10px;
 }
 
@@ -41,15 +41,14 @@
   padding: 14px 18px;
   border-radius: 20px;
   cursor: pointer;
-
   color: var(--gray);
   text-align: start;
   font-size: 1.4rem;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 .tab.active {
- color: var(--main);
+  color: var(--main);
 }
 
 .productgrid-right {
@@ -65,32 +64,34 @@
 
 .product-grid {
   display: grid;
+  gap: 70px;
   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
 }
 
-.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
-}
-
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .productgrid-wrapper {
     grid-template-columns: 1fr;
   }
 
   .productgrid-tabs {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 20px;
   }
 
+  .tab-heading {
+    font-size: 1.5rem;
+    color: var(--light);
+    text-align: center;
+  }
   .productgrid-title {
-    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--main);
+    margin-bottom: 30px;
   }
+  .product-grid {
+    display: grid;
 
-  .tab {
-    padding: 10px 16px;
+    grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
   }
 }
