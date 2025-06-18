@@ -3,11 +3,10 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./ProductDetail.css";
 import { CartContext } from "../../context/CartContext";
-import { FaUserCircle } from "react-icons/fa";
-import { FaShoppingBasket } from "react-icons/fa";
 import NotificationBubble from "../notification/Notification";
 import Card from "../card/Card";
-import RealisticFlowerLoader from "./Flower";
+import { LuCake } from "react-icons/lu";
+import BakeryLoader from "./Flower";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -70,7 +69,7 @@ const ProductDetail = () => {
   if (loading)
     return (
       <div>
-        <RealisticFlowerLoader />
+        <BakeryLoader />
       </div>
     );
   if (!cake) return <div>Product not found.</div>;
@@ -107,9 +106,19 @@ const ProductDetail = () => {
               <div className="product-tags">
                 <p>{cake.category}</p>
               </div>
-              {cake.contains.map((item, i) => (
-                <li key={i}>• {item}</li>
-              ))}
+              <p className="product-subtitle">This sweet treat contains:</p>
+              <ul className="product-contains-list">
+                {cake.contains.map((item, i) => (
+                  <li key={i}>{item.replace(/^"|"$/g, "")}</li>
+                ))}
+              </ul>
+
+              <p className="product-note-title"> Note from the Baker:</p>
+              <p className="product-note-text">
+                This cake is freshly baked upon order. Please refrigerate if not
+                consumed within 6 hours. For best taste, allow the cake to sit
+                at room temperature for 20 minutes before serving.
+              </p>
 
               <div className="detail-button">
                 <button
@@ -121,7 +130,7 @@ const ProductDetail = () => {
                     setTimeout(() => setAlert(null), 3000);
                   }}
                 >
-                  Add to My Box <FaShoppingBasket fontSize="18px" />
+                  Add to My Box <LuCake fontSize="18px" />
                 </button>
               </div>
             </div>
