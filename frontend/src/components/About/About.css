@@ -6,14 +6,14 @@
   padding-bottom: 60px;
 }
 
-/* Hero Section */
+/* --- HERO SECTION --- */
 .about-hero {
   background: url('https://png.pngtree.com/background/20230410/original/pngtree-fruit-chocolate-cake-dessert-gourmet-advertising-background-picture-image_2384578.jpg') center/cover no-repeat;
   text-align: center;
   color: white;
   padding: 170px 50px;
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.454);
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 .about-hero h1 {
@@ -26,13 +26,12 @@
   color: white;
 }
 
-/* General Section Styling */
+/* --- GENERAL SECTION --- */
 .about-section {
   max-width: 900px;
   margin: 60px auto;
   padding: 0 20px;
   text-align: center;
-  gap: 10px;
 }
 
 .about-section h2 {
@@ -41,29 +40,12 @@
   color: #7b4f2d;
 }
 
-/* Values */
-.about-values ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
-}
-
-/* .about-values li {
-  background-color: #ffffff;
-   padding: 10px 20px; 
-   border-radius: 10px; 
-  font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-} */
-
-.about-section img{
+.about-section img {
   height: 200px;
   width: 230px;
 }
-/* Team Section */
+
+/* --- TEAM SECTION --- */
 .team-container {
   display: flex;
   flex-wrap: wrap;
@@ -92,7 +74,7 @@
   margin-bottom: 10px;
 }
 
-/* CTA Section */
+/* --- CTA SECTION --- */
 .about-cta {
   text-align: center;
   margin-top: 60px;
@@ -118,9 +100,10 @@
 .btn-primary:hover {
   background-color: white;
   border: 1px solid #7b4f2d;
-  color:#7b4f2d;
+  color: #7b4f2d;
 }
-/* Values Section Grid */
+
+/* --- VALUES GRID --- */
 .values-grid {
   list-style: none;
   padding: 0;
@@ -134,7 +117,6 @@
 .values-grid li {
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  /* border-radius: 10px; */
   padding: 15px;
   text-align: center;
 }
@@ -143,7 +125,6 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
-  /* border-radius: 8px; */
   margin-bottom: 10px;
 }
 
@@ -152,4 +133,60 @@
   font-size: 1rem;
   color: #4b3b2a;
   margin: 0;
+}
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 120px 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .team-card {
+    width: 45%;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* Phones (<= 480px) */
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 100px 16px;
+  }
+
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+
+  .team-card {
+    width: 100%;
+  }
+
+  .about-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .about-section img {
+    width: 100%;
+    height: auto;
+  }
 }
