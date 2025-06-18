@@ -11,7 +11,7 @@
   z-index: 1000;
 }
 .modal {
-  background: url("https://i.pinimg.com/474x/2c/0d/0a/2c0d0ac2ad21b8f681681676aa5200b0.jpg")
+  background: url("https://img.pikbest.com/ai/illus_our/20230427/a755af992345626169848ad9e503532e.jpg!sw800")
     center/cover no-repeat;
   transition: background-image 0.3s ease;
   padding: 2rem;
@@ -27,11 +27,11 @@
 }
 
 .modal.hovered-confirm {
-  background: url("https://c4.wallpaperflare.com/wallpaper/250/710/482/wood-heart-on-lavender-purple-lavender-wallpaper-thumb.jpg")
+  background: url("https://media.istockphoto.com/id/485866960/photo/sad-coffee-cup.jpg?s=612x612&w=0&k=20&c=pCpuoYwHYf4ffZKmyH9z54qveqqEFsJ7FDlEJYvkwNA=")
     center/cover no-repeat;
 }
 .modal.hovered-cancel {
-  background: url("https://i.pinimg.com/474x/52/76/08/52760807b27f18a9509bcd2bd72436ad.jpg")
+  background: url("https://www.royalcupcoffee.com/sites/default/files/images/blog/AdobeStock_159183621update.jpg")
     center/cover no-repeat;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .modal-buttons button:first-child:hover {
-  background: linear-gradient(135deg,  #bc97d4, #8a5ca6)!important;
+  background: linear-gradient(135deg,   var(--light),var(--main))!important;
 
 } 
 
