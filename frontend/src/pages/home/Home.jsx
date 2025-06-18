@@ -2,10 +2,9 @@ import React, { useContext } from "react";
 import Slide from "../../components/slide/Slide";
 import ProductGrid from "../../components/product/ProductGrid";
 import Feedback from "../feedback/Feedback";
-import { CartContext } from "../../context/CartContext";
-import GlimpseSection from "../Glimpse/Glimpse";
-
+import { CartContext } from "../../context/CartContext"
 import SummerSpecials from "../banner/Banner";
+import Gallery from "../Glimpse/GlimpseGallery";
 
 const Home = () => {
   const { url } = useContext(CartContext);
@@ -16,11 +15,7 @@ const Home = () => {
         <ProductGrid url={`${url}`} />
       </section>
     <SummerSpecials/>
-      <section id="gallery">
-        <GlimpseSection />
-      </section>
-
-
+  
       <section id="feedback">
         <Feedback />
       </section>
