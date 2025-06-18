@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Contact.css";
 import { assets } from "../../assets/assets";
 import NotificationBubble from "../notification/Notification";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { CartContext } from "../../context/CartContext";
 
 
 const ContactForm = () => {
+  const {url} = useContext(CartContext)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -41,7 +43,7 @@ const ContactForm = () => {
     data.append("rating", formData.rating);
 
     try {
-      const response = await fetch("http://localhost:2000/api/contact", {
+      const response = await fetch(`${url}/api/contact`, {
         method: "POST",
         body: data,
       });
