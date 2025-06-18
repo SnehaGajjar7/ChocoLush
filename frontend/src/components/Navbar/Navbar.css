@@ -274,11 +274,10 @@
   .navbar {
     flex-wrap: wrap;
     display: flex;
-  
     justify-content: space-between;
   }
   .navbar .logo {
-    width: 150px;
+    width: 130px;
     height: auto;
   }
   
@@ -336,7 +335,7 @@
     font-size: 13px;
     color: var(--gray);
     border: 1px solid var(--main);
-    padding: 7px 20px;
+    padding: 7px 10px;
     border-radius: 50px;
     cursor: pointer;
     transition: 0.3s;
