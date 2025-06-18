@@ -9,14 +9,14 @@ const frontend_url = "http://localhost:3000";
 const placeOrder = async (req, res) => {
   try {
     const userId = req.userId; // from authMiddleware
-    const { items, amount, address, delivery } = req.body;
+    const { items, amount, address} = req.body;
 
     const newOrder = new orderModel({
       userId,
       items,
       amount,
       address,
-      delivery,
+     
       payment: false,
     });
 
