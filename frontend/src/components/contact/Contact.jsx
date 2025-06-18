@@ -1,88 +1,222 @@
-import React, { useState } from 'react';
-import './Contact.css';
-import { assets } from '../../assets/assets';
+import React, { useState } from "react";
+import "./Contact.css";
+import { assets } from "../../assets/assets";
+import NotificationBubble from "../notification/Notification";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    city: '',
-    contact: '',
-    message: '',
+    name: "",
+    email: "",
+    city: "",
+    contact: "",
+    message: "",
     file: null,
+    rating: 0,
   });
+
+  const [alert, setAlert] = useState(null); // ✅ add this line
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: files ? files[0] : value
+      [name]: files ? files[0] : value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Your grievance has been submitted successfully!');
+
+    const data = new FormData();
+    data.append("name", formData.name);
+    data.append("email", formData.email);
+    data.append("city", formData.city);
+    data.append("contact", formData.contact);
+    data.append("message", formData.message);
+    if (formData.file) {
+      data.append("image", formData.file);
+    }
+    data.append("rating", formData.rating);
+
+    try {
+      const response = await fetch("http://localhost:2000/api/contact", {
+        method: "POST",
+        body: data,
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        setAlert({ message: "Thanks for the sweet feedback! " });
+        setTimeout(() => setAlert(null), 3000);
+        setFormData({
+          name: "",
+          email: "",
+          city: "",
+          contact: "",
+          message: "",
+          file: null,
+          rating: 0,
+        });
+      } else {
+        setAlert({ message: "Oops! Something went wrong. " });
+        setTimeout(() => setAlert(null), 3000);
+      }
+    } catch (err) {
+      console.error(err);
+      setAlert({ message: "Server error. Please try again later." });
+      setTimeout(() => setAlert(null), 3000);
+    }
   };
 
   return (
-    <div className="contact-wrapper">
-      <div className="form-section">
-        <h2>Feedback Form</h2>
-        <form className="contact-form" onSubmit={handleSubmit}>
-
-          <div className="form-row">
-            <div className="form-group">
-              <label>Name:</label>
-              <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+    <>
+      <NotificationBubble
+        message={alert?.message}
+        onClose={() => setAlert(null)}
+      />
+      <div className="contact-wrapper">
+        <div className="form-section">
+          <h2>Feedback Form</h2>
+          <form className="contact-form" onSubmit={handleSubmit}>
+            {/* Name & City */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label>City:</label>
+                <input
+                  type="text"
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
 
-            <div className="form-group">
-              <label>City:</label>
-              <input type="text" name="city" value={formData.city} onChange={handleChange} />
+            {/* Email & Contact */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label>Contact No:</label>
+                <input
+                  type="tel"
+                  name="contact"
+                  value={formData.contact}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="form-row">
+            {/* Message */}
             <div className="form-group">
-              <label>Email:</label>
-              <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+              <label>Message:</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
             </div>
 
-            <div className="form-group">
-              <label>Contact No:</label>
-              <input type="tel" name="contact" value={formData.contact} onChange={handleChange} />
+            {/* File Upload */}
+            <div className="form-group file-upload">
+              <label>Attach File:</label>
+              <input type="file" name="file" onChange={handleChange} />
             </div>
-          </div>
 
-          <div className="form-group">
-            <label>Message:</label>
-            <textarea name="message" value={formData.message} onChange={handleChange} required />
-          </div>
+            {/* Rating */}
+            <div className="form-group rating-group">
+              <label>How Sweet Was Your Experience?</label>
+              <div className="hearts">
+                {[1, 2, 3, 4, 5].map((level) => (
+                  <span
+                    key={level}
+                    onClick={() =>
+                      setFormData((prev) => ({ ...prev, rating: level }))
+                    }
+                    style={{
+                      cursor: "pointer",
+                      fontSize: "26px",
+                      transition: "transform 0.2s",
+                    }}
+                    title={
+                      level === 1
+                        ? "Okay"
+                        : level === 2
+                        ? "Nice"
+                        : level === 3
+                        ? "Yummy!"
+                        : level === 4
+                        ? "So Sweet!"
+                        : "ChocoLove Overload"
+                    }
+                  >
+                    {formData.rating >= level ? <AiFillHeart color="#e2aaaa"  /> : <AiOutlineHeart  />}
+                  </span>
+                ))}
+              </div>
+              <p className="rating-label">
+                {formData.rating === 0
+                  ? "No rating yet"
+                  : formData.rating === 1
+                  ? "Okay"
+                  : formData.rating === 2
+                  ? "Nice"
+                  : formData.rating === 3
+                  ? "Yummy!"
+                  : formData.rating === 4
+                  ? "So Sweet!"
+                  : "ChocoLove Overload 💖"}
+              </p>
+            </div>
 
-          <div className="form-group file-upload">
-            <label>Attach File:</label>
-            <input type="file" name="file" onChange={handleChange} />
-          </div>
+            <button type="submit" className="submit-btn">
+              Submit
+            </button>
+          </form>
+        </div>
 
-          <button type="submit" className="submit-btn">Submit</button>
-        </form>
+        {/* Contact Info */}
+        <div className="info-section">
+          <img
+            src={assets.feedback}
+            alt="Website Logo"
+            className="info-sectionlogo"
+          />
+          <h3> Registered Office</h3>
+          <p>
+            Chocolush Pvt Ltd
+            <br />
+            127 Dreamy Avenue, Town City
+            <br />
+            Gujarat, India - 110001
+            <br />
+            +91-9876543210
+            <br />
+            happy@chocolush.com
+          </p>
+        </div>
       </div>
-
-      <div className="info-section">
-      <img src={assets.feedback} alt="Website Logo" className="info-sectionlogo" />
-        <h3> Registered Office</h3>
-        <p>
-          Chocolush Pvt Ltd<br />
-          127 Dreamy Avenue, Town City<br />
-          Gujarat, India - 110001<br />
-          +91-9876543210<br />
-          happy@chocolush.com
-        </p>
-
-      </div>
-    </div>
+    </>
   );
 };
 
