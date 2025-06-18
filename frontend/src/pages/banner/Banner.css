@@ -59,3 +59,11 @@
     transform: translateY(0);
   }
 }
+@media (max-width: 768px) {
+  .summer-specials-page {
+    max-width: 100%;
+  }
+  .summer-header h1 {
+    font-size: 1.7rem;
+  }
+}
