@@ -5,7 +5,7 @@ export const CartContext = createContext();
 
 const CartContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = "http://localhost:2000";
+  const url = "https://chocolush-backend.onrender.com";
   const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [collections, setCollection] = useState([]);
   const [wishlist, setWishlist] = useState([]);
