@@ -2,12 +2,14 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import "./Cart.css";
-import { RiFlowerFill } from "react-icons/ri";
-import { FaShoppingCart } from "react-icons/fa";
-import { GiFlowerTwirl } from "react-icons/gi";
-import { FaRegFaceSadTear } from "react-icons/fa6";
-import { RiDeleteBin5Fill } from "react-icons/ri";
 import NotificationBubble from "../../components/notification/Notification";
+import { RiDeleteBin5Fill } from "react-icons/ri";
+import { FaRegFaceSadTear } from "react-icons/fa6";
+import { GiCupcake} from "react-icons/gi";
+import { FaShoppingCart } from "react-icons/fa";
+import { GiDonut } from "react-icons/gi";
+
+
 
 const Cart = () => {
   const { cartItems, removeFromCart, getTotalCartAmount, collections, url } =
@@ -22,7 +24,7 @@ const Cart = () => {
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // slight delay to ensure page renders
+    }, 100);
   };
 
   return (
@@ -107,31 +109,31 @@ const Cart = () => {
         ) : (
           <div className="empty-cart">
             <div className="empty-cart-img">
-              <img src="https://img.goodfon.com/wallpaper/big/c/c8/tiulpany-vesna-8-marta-rozovye-korzina-podarok-krasivye.webp" />
+              <img src="https://www.shutterstock.com/image-photo/muffins-basket-isolated-on-white-600nw-158146637.jpg" />
             </div>
 
             <div className="empty-cart-msg">
               <p>
                 <strong>
-                  Uh-oh! Your cart has trust issues now{" "}
-                  <FaRegFaceSadTear color="rgb(63, 145, 38)" /> Add a few items?{" "}
-                  <RiFlowerFill color="#b03a5b" />
+                  Oh crumbs! Your cart is feeling a little empty{" "}
+                  <FaRegFaceSadTear color="#D9777E" /> Add some sweetness?{" "}
+                  <GiCupcake color="#F9A826" />
                 </strong>
               </p>
               <p>
-                It’s been waiting patiently, but it’s starting to feel a little
-                lonely and neglected.
+                It’s been patiently waiting for some treats — cupcakes, cookies,
+                maybe a brownie?
               </p>
               <p>
-                Why not add a few beautiful items to brighten its day?{" "}
-                <GiFlowerTwirl color="#f3a5b1" />
+                Fill it with joy and sprinkle a little happiness today!{" "}
+                <GiDonut color="#F3A5B1" />
               </p>
               <p>
-                Treat yourself to something special—you deserve it!{" "}
-                <FaShoppingCart color="#b03a5b" />
+                Life’s short. Eat the pastry. Buy the cake.{" "}
+                <FaShoppingCart color="#D9777E" />
               </p>
               <button className="continue-btn" onClick={handleAddMoreLove}>
-                Add More Love
+                Browse Delicious Treats
               </button>
             </div>
           </div>
