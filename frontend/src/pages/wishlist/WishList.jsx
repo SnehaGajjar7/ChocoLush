@@ -23,7 +23,7 @@ const WishList = () => {
           const wishlistIds = userData.wishlist || [];
 
           if (wishlistIds.length > 0) {
-            const res2 = await axios.post(`${url}/api/flower/multiple`, {
+            const res2 = await axios.post(`${url}/api/cake/multiple`, {
               ids: [...wishlistIds],
             });
 
