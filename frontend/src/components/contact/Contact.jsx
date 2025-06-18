@@ -201,7 +201,7 @@ const ContactForm = () => {
         <div className="info-section">
           <img
             src={assets.feedback}
-            alt="Website Logo"
+            alt="ChocoLush"
             className="info-sectionlogo"
           />
           <h3> Registered Office</h3>
