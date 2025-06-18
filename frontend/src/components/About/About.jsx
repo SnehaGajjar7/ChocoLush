@@ -57,27 +57,9 @@ const About = () => {
         </ul>
       </section>
 
-      {/* Meet the Team */}
-      {/* <section className="about-section team">
-        <h2>Meet Our Bakers</h2>
-        <div className="team-container">
-          <div className="team-card">
-            <img src="/images/founder.jpg" alt="Jemish Patel" />
-            <h3>Jemish Patel</h3>
-            <p>Founder & Head Baker</p>
-          </div>
-          <div className="team-card">
-            <img src="/images/sara.jpg" alt="Sara Lee" />
-            <h3>Sara Lee</h3>
-            <p>Pastry Chef</p>
-          </div>
-        </div>
-      </section> */}
-
-      {/* CTA */}
       <section className="about-cta">
         <h2>Visit Us or Order Online</h2>
-        <Link to="/menu" className="btn-primary">
+        <Link to="/#arrivals" className="btn-primary">
           Explore Our Menu
         </Link>
       </section>
