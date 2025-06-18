@@ -23,7 +23,7 @@ const Collection = () => {
   return (
     <div className="collection-container">
       <h2 className="section-title">
-        {filterValue?.toUpperCase()} COLLECTION <FaSeedling color="rgb(117, 131, 99)" />
+        {filterValue?.toUpperCase()}
       </h2>
       <div className="collection-grid">
         {filtered.length > 0 ? (
