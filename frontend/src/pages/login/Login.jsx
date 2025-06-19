@@ -130,7 +130,7 @@ const Login = ({ setShowLogin }) => {
 
             {currState === "Login" ? (
               <p>
-                Create Velvet Bloom Account?{" "}
+                Create ChocoLush Account?{" "}
                 <span onClick={() => setCurrState("Sign up")}>Click here</span>
               </p>
             ) : (
