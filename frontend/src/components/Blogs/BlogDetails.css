@@ -71,7 +71,7 @@
 @media (max-width: 768px) {
   .blogs-details-page {
     padding: 30px 15px;
-    margin: 60px 10px;
+    margin: 10px 10px;
   }
 
   .blogs-details-page .content-and-img {
@@ -85,10 +85,10 @@
   }
 
   .full-content {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .blogs-details-page h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
