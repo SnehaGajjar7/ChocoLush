@@ -5,7 +5,8 @@ import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { CartContext } from "../../context/CartContext";
 import NotificationBubble from "../notification/Notification";
 import { FaArrowTrendUp } from "react-icons/fa6";
-import { SiCodefresh } from "react-icons/si";
+import { SiCodechef } from "react-icons/si";
+
 
 const Card = ({ product }) => {
   const [alert, setAlert] = useState(null);
@@ -30,7 +31,7 @@ const Card = ({ product }) => {
       <div className="collection-card" onClick={handleClick}>
         {product.isNew && (
           <div className="badge new">
-            New <SiCodefresh />
+            New <SiCodechef />
           </div>
         )}
         {product.isTrending && (
