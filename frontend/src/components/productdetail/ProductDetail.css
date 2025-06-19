@@ -1,10 +1,11 @@
+/* BASE STYLES – No changes made to your desktop styles except fixes below */
 .product-detail-container {
   max-width: 90%;
   margin: 20px auto;
   padding: 40px 24px;
   box-sizing: border-box;
- 
 }
+
 .product-content {
   display: flex;
   flex-direction: row;
@@ -12,7 +13,8 @@
   align-items: flex-start;
   justify-content: center;
   height: 100%;
-  overflow: hidden;
+  overflow: visible !important;
+  flex-wrap: wrap;
 }
 
 .product-image-wrapper {
@@ -43,10 +45,11 @@
   flex: 1;
   min-width: 320px;
   max-width: 600px;
-  height: 100%;
-  overflow-y: auto;
+  height: auto !important;
+  overflow: visible !important;
   padding-right: 10px;
 }
+
 .product-info::-webkit-scrollbar {
   width: 6px;
 }
@@ -55,11 +58,18 @@
   border-radius: 10px;
 }
 
+/* Typography and structure */
 .product-title {
   font-size: 2.2rem;
   font-weight: 500;
   color: var(--main);
   margin-bottom: 12px;
+}
+
+.product-title2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: var(--main);
 }
 
 .product-price {
@@ -68,9 +78,11 @@
   color: var(--green);
   margin-bottom: 16px;
 }
+
 .product-subtitle {
   color: var(--dark);
 }
+
 .product-description {
   font-size: 1.1rem;
   color: var(--black);
@@ -99,17 +111,17 @@
   padding-left: 20px;
 }
 
-.product-contains-list li {
+.product-contains-list li,
+.contains-item {
   font-size: 14px;
   color: #444;
   line-height: 1.5;
 }
 
 .contains-item {
-  font-size: 14px;
   color: #6e4b4b;
-  line-height: 1.5;
 }
+
 .product-note-title {
   font-weight: 600;
   margin-top: 20px;
@@ -128,7 +140,7 @@
   border-radius: 8px;
 }
 
-
+/* Buttons */
 .basket-button {
   display: flex;
   align-items: center;
@@ -141,6 +153,7 @@
   border-radius: 10px;
   cursor: pointer;
   margin-top: 15px;
+  transition: all 0.3s ease;
 }
 
 .basket-button:hover {
@@ -149,84 +162,68 @@
   border: 1px solid var(--main);
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
+/* Related products grid */
 .related-product {
   display: grid;
-  /* gap: 30px; */
-  grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+  gap: 70px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .product-content {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
-
-  .product-image-wrapper {
-    width: 100%;
-    align-items: center;
-  }
-
-  .image-gallery-container {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .main-product-image {
-    width: 90vw;
-    max-width: 500px;
-  }
-
   .product-info {
-    width: 100%;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 12px;
   }
 
+  .product-description {
+    text-align: justify;
+    word-break: break-word;
+  }
+
+  .product-detail-container {
+    width: 100%;
+    padding: 20px 16px;
+    box-sizing: border-box;
+  }
   .product-title {
-    text-align: center;
+    font-size: 1.5rem;
   }
-
-  .add-to-cart-btn {
-    width: 100%;
+  .related-product {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
   }
 }
-/* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
   .product-content {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
-
-  .product-image-wrapper {
-    width: 100%;
-    align-items: center;
-  }
-
-  .image-gallery-container {
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .main-product-image {
-    width: 70vw;
-    max-width: 500px;
-  }
-
   .product-info {
-    width: 100%;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 12px;
   }
 
+  .product-description {
+    text-align: justify;
+    word-break: break-word;
+  }
+
+  .product-detail-container {
+    width: 100%;
+    padding: 20px 16px;
+    box-sizing: border-box;
+  }
   .product-title {
-    text-align: center;
-  }
-
-  .add-to-cart-btn {
-    width: 100%;
+    font-size: 1.5rem;
   }
 }
