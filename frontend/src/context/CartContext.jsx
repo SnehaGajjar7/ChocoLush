@@ -28,8 +28,7 @@ const CartContextProvider = (props) => {
         console.error("Failed to add item to backend cart:", error);
       }
     } else {
-      alert("Please login to add items to your basket.");
-      return;
+      return null;
     }
   };
 
