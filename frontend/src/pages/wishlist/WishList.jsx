@@ -3,14 +3,17 @@ import { CartContext } from "../../context/CartContext";
 import "./WishList.css";
 import axios from "axios";
 import Card from "../../components/card/Card";
+import BakeryLoader from "../../components/productdetail/Flower";
 
 const WishList = () => {
   const { url, token } = useContext(CartContext);
   const [user, setUser] = useState(null);
   const [wishlistItems, setWishlistItems] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProfile = async () => {
+      setLoading(true);
       try {
         const res = await axios.get(`${url}/api/user/profile`, {
           headers: { token },
@@ -40,6 +43,8 @@ const WishList = () => {
         }
       } catch (err) {
         console.error("Error fetching profile:", err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -48,18 +53,22 @@ const WishList = () => {
 
   return (
     <div className="wishlist-container">
-      <h2 className="wishlist-title">Your Wishlist</h2>
-      <div className="wishlist-grid">
-        {wishlistItems.length === 0 ? (
-          <p>No items in wishlist.</p>
-        ) : (
-          <div className="profile-wishlist">
-            {wishlistItems.map((item) => (
-              <Card key={item._id} product={item} />
-            ))}
+      {loading ? (
+        <BakeryLoader />
+      ) : (
+        <>
+          <h2 className="wishlist-title">Your Wishlist</h2>
+          <div className="wishlist-grid">
+            {wishlistItems.length > 0 ? (
+              wishlistItems.map((item) => (
+                <Card key={item._id} product={item} />
+              ))
+            ) : (
+              <p>No items in wishlist.</p>
+            )}
           </div>
-        )}
-      </div>
+        </>
+      )}
     </div>
   );
 };
