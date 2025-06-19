@@ -70,7 +70,15 @@
   top: -8px;
   right: -8px;
 }
-
+.shopping-icon{
+  font-size: 25px;
+}
+.wishlist-icon{
+  font-size: 25px;
+}
+.profile-icon{
+  font-size: 30px;
+}
 /* --- Mega Menu --- */
 .dropdown {
   position: relative;
@@ -227,7 +235,7 @@
   position: absolute;
   top: 40px;
   right: 0;
-  width: 180px;
+  width: 150px;
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -246,8 +254,8 @@
 .nav-profile-dropdown li {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 10px 20px;
+  /* gap: 20px; */
+  padding: 10px 10px;
   cursor: pointer;
   transition: background 0.2s ease;
 }
@@ -277,7 +285,7 @@
     justify-content: space-between;
   }
   .navbar .logo {
-    width: 130px;
+    width: 100px;
     height: auto;
   }
   
@@ -340,5 +348,14 @@
     cursor: pointer;
     transition: 0.3s;
     font-weight: 700;
+  }
+  .shopping-icon{
+    font-size: 20px;
+  }
+  .wishlist-icon{
+    font-size: 20px;
+  }
+  .profile-icon{
+    font-size: 25px;
   }
 }
