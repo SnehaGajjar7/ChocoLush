@@ -70,5 +70,9 @@
   padding: 12px;
   font-weight: 600;
   color: var(--text-dark);
-
+}
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 28px;
+  }
 }
