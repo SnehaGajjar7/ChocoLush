@@ -2,6 +2,7 @@
   max-width: 90%;
   margin: 0 auto;
   padding: 40px 20px;
+
 }
 
 .wishlist-title {
@@ -14,10 +15,15 @@
 
 .wishlist-grid {
   display: grid;
-  gap: 30px;
+  gap: 70px;
   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
 }
 
 
-
+@media (max-width: 768px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
+  }
+}
 
