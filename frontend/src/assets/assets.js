@@ -1,4 +1,4 @@
-import logo from "./ChocoLush.png";
+import logo from "./image.png";
 import macroon from "./macroon.png";
 import cross_icon from "./cross_icon.png";
 import feedback from "./feedback.png";
