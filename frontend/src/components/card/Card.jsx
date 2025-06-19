@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import "./Card.css";
 import { useNavigate, Link } from "react-router-dom";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
-import { MdDeliveryDining } from "react-icons/md";
 import { CartContext } from "../../context/CartContext";
 import NotificationBubble from "../notification/Notification";
 import { FaArrowTrendUp } from "react-icons/fa6";
@@ -44,7 +43,7 @@ const Card = ({ product }) => {
           onClick={(e) => {
             e.stopPropagation();
             addToWishlist(product._id);
-            setAlert({ message: " Saved to your bouquet of wishes !!" });
+            setAlert({ message: "Added to your sweet cravings collection!" });
             setTimeout(() => setAlert(null), 3000);
           }}
         >
@@ -73,8 +72,11 @@ const Card = ({ product }) => {
 
           <div className="price-rating">
             <p className="collection-price">₹{product.price}</p>
+          
           </div>
+      
         </div>
+     
       </div>
     </>
   );
