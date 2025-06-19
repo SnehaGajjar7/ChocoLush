@@ -2,9 +2,10 @@ import React, { useContext,useEffect } from "react";
 import "./Collection.css";
 import { useParams} from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
-import { FaSeedling } from "react-icons/fa6";
+
 import Card from "../card/Card";
-import RealisticFlowerLoader from "../productdetail/Flower";
+
+import BakeryLoader from "../productdetail/Flower";
 
 const Collection = () => {
   const { filterType, filterValue } = useParams();
@@ -30,7 +31,7 @@ const Collection = () => {
            filtered.map((product) => <Card key={product._id} product={product} />)
 
         ) : (
-          <RealisticFlowerLoader/>
+          <BakeryLoader/>
         )}
       </div>
     </div>
