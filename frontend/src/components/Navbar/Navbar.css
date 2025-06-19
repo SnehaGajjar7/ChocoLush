@@ -276,7 +276,87 @@
   border-top: 1px solid #eee;
 }
 
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .navbar-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    border-top: 1px solid #eee;
+    z-index: 999;
+  }
 
+  .navbar-menu.open {
+    display: flex;
+    
+  }
+
+  .navbar-menu li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .dropdown .mega-menu {
+    position: static;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    border: none;
+    box-shadow: none;
+  }
+
+  .dropdown.open .mega-menu {
+    display: flex;
+  }
+
+  .mega-menu-column {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+  .navbar button {
+    background: transparent;
+    font-size: 13px;
+    color: var(--gray);
+    border: 1px solid var(--main);
+    padding: 7px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 700;
+  }
+  .shopping-icon{
+    font-size: 20px;
+  }
+  .wishlist-icon{
+    font-size: 20px;
+  }
+  .profile-icon{
+    font-size: 25px;
+  }
+}
 
 @media (max-width: 768px) {
   .navbar {
