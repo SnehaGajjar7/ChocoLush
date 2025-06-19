@@ -1,9 +1,7 @@
-
 .profile-page {
   margin: 0 auto;
   padding: 40px 20px;
-
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .profile-banner {
@@ -11,7 +9,6 @@
   max-height: 400px;
   overflow: hidden;
   border-radius: 20px;
- 
 }
 
 .profile-banner img {
@@ -35,7 +32,7 @@
   border-radius: 20px;
   padding: 30px;
   max-width: 350px;
-  position: relative; 
+  position: relative;
   overflow: hidden;
   min-height: 600px;
 }
@@ -82,7 +79,6 @@
   background: #fff;
   border-radius: 20px;
   padding: 30px 20px;
-
 }
 
 .tab-switcher {
@@ -108,33 +104,36 @@
   background: var(--main);
   color: var(--cream);
   box-shadow: 0 6px 14px rgba(255, 128, 128, 0.3);
-
 }
 
 .profile-cart,
 .profile-wishlist {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
- 
+  justify-content: center;
 }
 
 .cart-item-wrapper {
   padding: 16px;
   border-radius: 16px;
- 
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 425px) {
+  
   .profile-bottom {
     flex-direction: column;
   }
-
   .tab-switcher {
     flex-direction: column;
   }
 
   .tab-btn {
     width: 100%;
+  }
+  .profile-cart,
+  .profile-wishlist {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
   }
 }
