@@ -100,7 +100,14 @@ const Cart = () => {
               </div>
               <button
                 className="checkout-btn"
-                onClick={() => navigate("/order")}
+                onClick={() => {
+                  setAlert({ message: "Please Login to Continue!" });
+                  setTimeout(() => {
+                    setAlert(null);
+                    navigate("/order");
+                  }, 1500);
+                }}
+                
               >
                 Proceed to Checkout
               </button>
@@ -109,7 +116,10 @@ const Cart = () => {
         ) : (
           <div className="empty-cart">
             <div className="empty-cart-img">
-              <img src="https://www.shutterstock.com/image-photo/muffins-basket-isolated-on-white-600nw-158146637.jpg" />
+              <img
+                src="https://www.shutterstock.com/image-photo/muffins-basket-isolated-on-white-600nw-158146637.jpg"
+                alt="ChocoLush"
+              />
             </div>
 
             <div className="empty-cart-msg">
