@@ -99,7 +99,7 @@
     border: 1px solid var(--main);
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 425px) {
     .place-order {
       flex-direction: column;
       padding: 20px;
@@ -110,5 +110,14 @@
     .place-order-right {
       max-width: 100%;
     }
+    
+  .place-order-left .title {
+    font-size: 25px;
+
+  }
+  .cart-total .title {
+    font-size: 25px;
+
+  }
   }
   
