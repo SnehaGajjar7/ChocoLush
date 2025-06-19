@@ -4,10 +4,6 @@ import { assets } from "../../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { FaHeart } from "react-icons/fa6";
-import { IoIosBasket } from "react-icons/io";
-import { FaUser } from "react-icons/fa";
-import { IoIosLogOut } from "react-icons/io";
-import { BsBoxSeamFill } from "react-icons/bs";
 import LogoutModal from "../logout/Logout";
 import { FaHouseChimneyUser } from "react-icons/fa6";
 import { FaShoppingBag } from "react-icons/fa";
@@ -196,11 +192,11 @@ const Navbar = ({ setShowLogin }) => {
         </ul>
         <div className="navbar-right">
           <Link to={"/wishlist"}>
-            <FaHeart color="#c27979" fontSize="25px" />
+            <FaHeart color="#c27979" className="wishlist-icon" />
           </Link>
           <div className="navbar-search-icon">
             <Link to={"/cart"}>
-              <FaShoppingBag color="gray" fontSize="25px" />
+              <FaShoppingBag color="gray" className="shopping-icon" />
             </Link>
             <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
           </div>
@@ -208,14 +204,14 @@ const Navbar = ({ setShowLogin }) => {
             <button onClick={() => setShowLogin(true)}>Sign In</button>
           ) : (
             <div className="navbar-profile">
-              <FaHouseChimneyUser fontSize="30px" color="rgb(141, 139, 145)" />
+              <FaHouseChimneyUser  className="profile-icon" color="rgb(141, 139, 145)" />
               <ul className="nav-profile-dropdown">
                 <li
                   onClick={() => {
                     navigate("/myorders");
                   }}
                 >
-                  <BsBoxSeamFill />
+                  {/* <BsBoxSeamFill  /> */}
                   <p>Orders</p>
                 </li>
                 <hr />
@@ -224,7 +220,7 @@ const Navbar = ({ setShowLogin }) => {
                     navigate("/profile");
                   }}
                 >
-                  <FaUser />
+                  {/* <FaUser /> */}
                   <p>Profile</p>
                 </li>
                 <hr />
@@ -233,7 +229,7 @@ const Navbar = ({ setShowLogin }) => {
                     setShowLogoutModal(true);
                   }}
                 >
-                  <IoIosLogOut />
+                  {/* <IoIosLogOut /> */}
                   <p>Logout</p>
                 </li>
               </ul>
