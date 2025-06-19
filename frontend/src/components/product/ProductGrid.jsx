@@ -49,16 +49,12 @@ const ProductGrid = ({ url }) => {
         </div>
 
         <div className="productgrid-right">
-          {/* Centered Title */}
           <div className="productgrid-title">
             Exquisite Bakes. Unforgettable Taste.
           </div>
 
-          {/* Product Cards */}
           {loading ? (
-            <div className="loading">
-              <BakeryLoader />
-            </div>
+            <BakeryLoader />
           ) : (
             <div className="product-grid">
               {dataToShow.map((product) => (
