@@ -152,11 +152,11 @@
   }
 
   .values-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 425px) {
   .about-hero {
     padding: 100px 16px;
   }
@@ -185,5 +185,8 @@
   .about-section img {
     width: 100%;
     height: auto;
+  }
+  .values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 }
