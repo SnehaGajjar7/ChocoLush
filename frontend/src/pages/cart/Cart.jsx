@@ -5,11 +5,9 @@ import "./Cart.css";
 import NotificationBubble from "../../components/notification/Notification";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { FaRegFaceSadTear } from "react-icons/fa6";
-import { GiCupcake} from "react-icons/gi";
+import { GiCupcake } from "react-icons/gi";
 import { FaShoppingCart } from "react-icons/fa";
 import { GiDonut } from "react-icons/gi";
-
-
 
 const Cart = () => {
   const { cartItems, removeFromCart, getTotalCartAmount, collections, url } =
@@ -67,7 +65,9 @@ const Cart = () => {
                         className="remove-btn"
                         onClick={() => {
                           removeFromCart(item.id);
-                          setAlert({ message: "This flower took a step back" });
+                          setAlert({
+                            message: "This bake took a little break!",
+                          });
                           setTimeout(() => setAlert(null), 3000);
                         }}
                       >
