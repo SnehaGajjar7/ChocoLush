@@ -10,7 +10,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { GiDonut } from "react-icons/gi";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, getTotalCartAmount, collections, url } =
+  const { cartItems, removeFromCart, getTotalCartAmount, collections, url,token } =
     useContext(CartContext);
   const [alert, setAlert] = useState(null);
 
@@ -101,13 +101,14 @@ const Cart = () => {
               <button
                 className="checkout-btn"
                 onClick={() => {
-                  setAlert({ message: "Please Login to Continue!" });
-                  setTimeout(() => {
-                    setAlert(null);
-                    navigate("/order");
-                  }, 1500);
+                  if (!token) {
+                    setAlert({ message: "Please login first to proceed!" });
+                    setTimeout(() => setAlert(null), 3000);
+                    return;
+                  }
+
+                  navigate("/order");
                 }}
-                
               >
                 Proceed to Checkout
               </button>
