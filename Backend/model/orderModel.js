@@ -5,11 +5,7 @@ const orderSchema = new mongoose.Schema({
   items: { type: Array, required: true },
   amount: { type: Number, required: true },
   address: { type: Object, required: true },
-  delivery: {
-    type: Object,
-    default: {},
-  },
-  status: { type: String, default: "Flower arrangements" },
+  status: { type: String, default: "Preparing Batter" },
   date: { type: Date, default: Date.now },
   payment: { type: Boolean, required: false },
 });
