@@ -22,7 +22,7 @@
 
 .footer-brand-new p {
   color: #bbb;
-  max-width: 300px;
+  max-width: 380px;
   line-height: 1.6;
 }
 
@@ -80,6 +80,8 @@
   }
 
   .footer-section, .footer-brand-new {
+    display: grid;
+    justify-content: space-around;
     width: 100%;
     max-width: 400px;
   }
