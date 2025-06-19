@@ -14,6 +14,13 @@
 
 .collection-grid {
   display: grid;
-  /* gap: 70px; */
+  gap: 70px;
   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+  
+}
+@media (max-width: 768px) {
+  .collection-grid{
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
+  }
 }
