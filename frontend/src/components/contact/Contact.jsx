@@ -172,7 +172,7 @@ const ContactForm = () => {
                         : "ChocoLove Overload"
                     }
                   >
-                    {formData.rating >= level ? <AiFillHeart color="#e2aaaa"  /> : <AiOutlineHeart  />}
+                    {formData.rating >= level ? <AiFillHeart color="#e2aaaa"  /> : <AiOutlineHeart color="gray"  />}
                   </span>
                 ))}
               </div>
