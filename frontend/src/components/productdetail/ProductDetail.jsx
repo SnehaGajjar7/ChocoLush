@@ -20,7 +20,7 @@ const ProductDetail = () => {
   const handleAddToCart = async () => {
     try {
       await addToCart(cake._id);
-      setAlert({ message: "Bloom added to your basket!" });
+      setAlert({ message: "Delight added to your box!" });
       setTimeout(() => setAlert(null), 3000);
     } catch (err) {
       console.error("Failed to add to cart with delivery info", err);
@@ -35,8 +35,8 @@ const ProductDetail = () => {
         const res = await axios.get(`${url}/api/cake/${id}/related`);
         if (res.data.success) {
           setRelatedCakes(res.data.data);
-          console.log("Category of base item:", cake.category);
-          console.log("Found related:", res.data.data);
+          // console.log("Category of base item:", cake.category);
+          // console.log("Found related:", res.data.data);
         }
       } catch (err) {
         console.error("Error fetching related items", err);
@@ -53,7 +53,7 @@ const ProductDetail = () => {
         if (response.data.success) {
           setCake(response.data.data);
           setImage(response.data.data.image); // set default image
-          console.log("Fetched cake:", response.data.data);
+          // console.log("Fetched cake:", response.data.data);
         } else {
           setCake(null);
         }
@@ -126,8 +126,7 @@ const ProductDetail = () => {
                   onClick={(e) => {
                     e.stopPropagation();
                     handleAddToCart();
-                    setAlert({ message: "added to your basket!" });
-                    setTimeout(() => setAlert(null), 3000);
+                   
                   }}
                 >
                   Add to My Box <LuCake fontSize="18px" />
@@ -136,7 +135,7 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-        <h2 className="product-title">You Might Also Love</h2>
+        <h2 className="product-title2">You Might Also Love</h2>
         <div className="related-product">
           {relatedCakes.length > 0 ? (
             relatedCakes.map((product) => (
