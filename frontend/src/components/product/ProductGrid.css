@@ -10,6 +10,8 @@
   gap: 30px;
   padding: 30px;
   align-items: flex-start;
+  justify-content: center;
+
 }
 
 .productgrid-tabs {
@@ -64,15 +66,14 @@
 
 .product-grid {
   display: grid;
-  /* gap: 70px; */
   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
 }
 
 @media (max-width: 768px) {
   .product-container {
-    /* padding: 60px 20px; */
-    margin: 0 auto;
+    margin: -80px auto 0 auto;
     max-width: 100%;
+    
   }
   
   .productgrid-wrapper {
@@ -80,14 +81,17 @@
   }
 
   .productgrid-tabs {
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .tab-heading {
     font-size: 1.5rem;
     color: var(--light);
     text-align: center;
+    justify-content: center;
   }
   .productgrid-title {
     font-size: 2rem;
@@ -95,5 +99,8 @@
     color: var(--main);
     margin-bottom: 30px;
   }
- 
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    justify-items: center; 
+  }
 }
